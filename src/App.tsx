@@ -1850,7 +1850,7 @@ export default function App() {
                 )}
               </div>
               <div className="details-row">
-                <span className="details-label">File:</span>{" "}
+                <span className="details-label">Std Library:</span>{" "}
                 {selectedNode.sourceUrl ? (
                   <a
                     className="inline-link"
