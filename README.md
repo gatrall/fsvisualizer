@@ -33,7 +33,7 @@ Then open the URL shown by Vite (typically [http://localhost:5173](http://localh
 
 You can run this with no ongoing manual work once enabled.
 
-- Workflow file (repo root): `../.github/workflows/fsvisualizer-pages.yml`
+- Workflow file: `.github/workflows/deploy-pages.yml`
 - What it does:
   - runs weekly (Monday at 09:17 UTC) and on manual trigger
   - clones canonical stdlib mirror (`javawizard/onshape-std-library-mirror`, branch `without-versions`)
