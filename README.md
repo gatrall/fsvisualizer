@@ -21,6 +21,15 @@ npm run index -- --root /path/to/onshape-std-library-mirror
 
 This writes `public/graph.json`.
 
+If you also want direct links to the Onshape source tabs in the details panel, first create an element map and then index with it:
+
+```bash
+export ONSHAPE_ACCESS_KEY=...
+export ONSHAPE_SECRET_KEY=...
+npm run onshape-map -- --out tools/onshape-element-map.json
+npm run index -- --root /path/to/onshape-std-library-mirror --onshape-map tools/onshape-element-map.json
+```
+
 ## Run Dev UI
 
 ```bash
@@ -66,6 +75,7 @@ After that, the site stays current automatically on schedule.
 - Cytoscape graph rendering with pan/zoom
 - Left sidebar search + navigation
 - Right details panel with clickable imports/reexports
+- Optional direct source links to `cad.onshape.com` for each module file
 - Graph usability controls:
   - Search filters the graph (not just the list)
   - View modes: search-only, search+neighbors, selected+1 hop, selected+2 hops, full
@@ -79,4 +89,5 @@ After that, the site stays current automatically on schedule.
 - `npm run dev` - Start Vite dev server
 - `npm run build` - Build production assets
 - `npm run index -- --root <dir>` - Index FeatureScript tree and emit `public/graph.json`
+- `npm run onshape-map -- --out tools/onshape-element-map.json` - Fetch Onshape `module -> elementId` map for source links
 - `npm run preview` - Preview built app

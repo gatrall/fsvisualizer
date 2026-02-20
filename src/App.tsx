@@ -1850,7 +1850,19 @@ export default function App() {
                 )}
               </div>
               <div className="details-row">
-                <span className="details-label">File:</span> {selectedNode.filePath}
+                <span className="details-label">File:</span>{" "}
+                {selectedNode.sourceUrl ? (
+                  <a
+                    className="inline-link"
+                    href={selectedNode.sourceUrl}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    {selectedNode.filePath}
+                  </a>
+                ) : (
+                  selectedNode.filePath
+                )}
               </div>
               <div className="details-row">
                 <span className="details-label">Module Path:</span> {selectedNode.modulePath}

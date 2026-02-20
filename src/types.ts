@@ -3,6 +3,7 @@ export interface GraphNodeData {
   label: string;
   filePath: string;
   modulePath: string;
+  sourceUrl?: string;
   imports: string[];
   reexports: string[];
   importTargets: string[];

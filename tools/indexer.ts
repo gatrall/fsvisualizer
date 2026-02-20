@@ -15,6 +15,7 @@ interface NodeData {
   label: string;
   filePath: string;
   modulePath: string;
+  sourceUrl?: string;
   imports: string[];
   reexports: string[];
   importTargets: string[];
@@ -46,15 +47,34 @@ interface GraphOutput {
 interface CliOptions {
   root: string;
   out: string;
+  onshapeMap?: string;
+  onshapeDocumentId?: string;
+  onshapeWorkspaceId?: string;
 }
 
+interface OnshapeElementMap {
+  documentId?: string;
+  workspaceId?: string;
+  elementsByName?: Record<string, string>;
+}
+
+const DEFAULT_ONSHAPE_STD_DOCUMENT_ID = "12312312345abcabcabcdeff";
+const DEFAULT_ONSHAPE_STD_WORKSPACE_ID = "a855e4161c814f2e9ab3698a";
+
 function printHelp(): void {
-  console.log(`FeatureScript stdlib indexer\n\nUsage:\n  npm run index -- --root <PATH_TO_STDLIB> [--out public/graph.json]\n`);
+  console.log(`FeatureScript stdlib indexer
+
+Usage:
+  npm run index -- --root <PATH_TO_STDLIB> [--out public/graph.json] [--onshape-map tools/onshape-element-map.json] [--onshape-document-id <id>] [--onshape-workspace-id <id>]
+`);
 }
 
 function parseArgs(argv: string[]): CliOptions {
   let root = "";
   let out = "public/graph.json";
+  let onshapeMap: string | undefined;
+  let onshapeDocumentId: string | undefined;
+  let onshapeWorkspaceId: string | undefined;
 
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
@@ -86,6 +106,51 @@ function parseArgs(argv: string[]): CliOptions {
       continue;
     }
 
+    if (arg === "--onshape-map") {
+      const value = argv[i + 1] ?? "";
+      if (!value) {
+        throw new Error("Missing value for --onshape-map <PATH_TO_JSON>");
+      }
+      onshapeMap = value;
+      i += 1;
+      continue;
+    }
+
+    if (arg.startsWith("--onshape-map=")) {
+      onshapeMap = arg.slice("--onshape-map=".length);
+      continue;
+    }
+
+    if (arg === "--onshape-document-id") {
+      const value = argv[i + 1] ?? "";
+      if (!value) {
+        throw new Error("Missing value for --onshape-document-id <id>");
+      }
+      onshapeDocumentId = value;
+      i += 1;
+      continue;
+    }
+
+    if (arg.startsWith("--onshape-document-id=")) {
+      onshapeDocumentId = arg.slice("--onshape-document-id=".length);
+      continue;
+    }
+
+    if (arg === "--onshape-workspace-id") {
+      const value = argv[i + 1] ?? "";
+      if (!value) {
+        throw new Error("Missing value for --onshape-workspace-id <id>");
+      }
+      onshapeWorkspaceId = value;
+      i += 1;
+      continue;
+    }
+
+    if (arg.startsWith("--onshape-workspace-id=")) {
+      onshapeWorkspaceId = arg.slice("--onshape-workspace-id=".length);
+      continue;
+    }
+
     throw new Error(`Unknown argument: ${arg}`);
   }
 
@@ -95,7 +160,10 @@ function parseArgs(argv: string[]): CliOptions {
 
   return {
     root: path.resolve(root),
-    out: path.resolve(process.cwd(), out)
+    out: path.resolve(process.cwd(), out),
+    onshapeMap: onshapeMap ? path.resolve(process.cwd(), onshapeMap) : undefined,
+    onshapeDocumentId,
+    onshapeWorkspaceId
   };
 }
 
@@ -105,6 +173,73 @@ function normalizePath(value: string): string {
 
 function toPosixRelative(root: string, filePath: string): string {
   return normalizePath(path.relative(root, filePath));
+}
+
+function toModuleFileName(value: string): string | undefined {
+  const normalized = normalizePath(value).trim();
+  if (!normalized) {
+    return undefined;
+  }
+
+  const basename = path.posix.basename(normalized);
+  if (!basename.endsWith(".fs")) {
+    return undefined;
+  }
+
+  return basename;
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+}
+
+async function loadOnshapeElementMap(filePath: string): Promise<OnshapeElementMap> {
+  const raw = await readFile(filePath, "utf8");
+  const parsed = JSON.parse(raw) as unknown;
+  if (!isRecord(parsed)) {
+    throw new Error(`Onshape map must be a JSON object: ${filePath}`);
+  }
+
+  const elementsByName = parsed.elementsByName;
+  if (elementsByName !== undefined) {
+    if (!isRecord(elementsByName)) {
+      throw new Error(`Onshape map field "elementsByName" must be an object: ${filePath}`);
+    }
+
+    for (const [moduleFile, elementId] of Object.entries(elementsByName)) {
+      if (typeof elementId !== "string" || elementId.trim().length === 0) {
+        throw new Error(
+          `Onshape map has invalid element id for "${moduleFile}" in ${filePath}`
+        );
+      }
+    }
+  }
+
+  const documentId =
+    typeof parsed.documentId === "string" && parsed.documentId.trim().length > 0
+      ? parsed.documentId.trim()
+      : undefined;
+  const workspaceId =
+    typeof parsed.workspaceId === "string" && parsed.workspaceId.trim().length > 0
+      ? parsed.workspaceId.trim()
+      : undefined;
+
+  return {
+    documentId,
+    workspaceId,
+    elementsByName: (elementsByName as Record<string, string> | undefined) ?? {}
+  };
+}
+
+function buildOnshapeSourceUrl(
+  elementId: string,
+  documentId: string,
+  workspaceId: string
+): string {
+  const encodedDoc = encodeURIComponent(documentId);
+  const encodedWorkspace = encodeURIComponent(workspaceId);
+  const encodedElement = encodeURIComponent(elementId);
+  return `https://cad.onshape.com/documents/${encodedDoc}/w/${encodedWorkspace}/e/${encodedElement}`;
 }
 
 function stripComments(source: string): string {
@@ -320,7 +455,14 @@ function chooseModulePath(aliases: Map<string, number> | undefined, fallback: st
     })[0][0];
 }
 
-async function buildGraph(root: string): Promise<GraphOutput> {
+async function buildGraph(
+  root: string,
+  onshapeSourceConfig?: {
+    documentId: string;
+    workspaceId: string;
+    elementsByName: Record<string, string>;
+  }
+): Promise<GraphOutput> {
   const fsFiles = await collectFsFiles(root);
   const parsedFiles: ParsedFile[] = [];
 
@@ -467,6 +609,19 @@ async function buildGraph(root: string): Promise<GraphOutput> {
     const targets = targetsByFile.get(file.id) ?? { importTargets: [], reexportTargets: [] };
     const symbolUsers: Record<string, string[]> = {};
     const directConsumers = directConsumersByTarget.get(file.id) ?? new Set<string>();
+    const moduleFileName = toModuleFileName(file.filePath);
+    const sourceElementId =
+      moduleFileName && onshapeSourceConfig
+        ? onshapeSourceConfig.elementsByName[moduleFileName]
+        : undefined;
+    const sourceUrl =
+      sourceElementId && onshapeSourceConfig
+        ? buildOnshapeSourceUrl(
+            sourceElementId,
+            onshapeSourceConfig.documentId,
+            onshapeSourceConfig.workspaceId
+          )
+        : undefined;
 
     for (const symbol of file.exportedSymbols) {
       const users = [...directConsumers]
@@ -484,6 +639,7 @@ async function buildGraph(root: string): Promise<GraphOutput> {
         label: path.posix.basename(file.filePath),
         filePath: file.filePath,
         modulePath: chooseModulePath(aliasCounts.get(file.id), file.filePath),
+        sourceUrl,
         imports: file.imports,
         reexports: file.reexports,
         importTargets: targets.importTargets,
@@ -528,13 +684,48 @@ async function main(): Promise<void> {
     throw new Error(`Root path does not exist or is not a directory: ${options.root}`);
   }
 
-  const graph = await buildGraph(options.root);
+  let onshapeSourceConfig:
+    | {
+        documentId: string;
+        workspaceId: string;
+        elementsByName: Record<string, string>;
+      }
+    | undefined;
+
+  if (options.onshapeMap) {
+    const mapStat = await stat(options.onshapeMap).catch(() => undefined);
+    if (!mapStat || !mapStat.isFile()) {
+      throw new Error(`Onshape map file does not exist: ${options.onshapeMap}`);
+    }
+
+    const map = await loadOnshapeElementMap(options.onshapeMap);
+    onshapeSourceConfig = {
+      documentId:
+        options.onshapeDocumentId ??
+        map.documentId ??
+        DEFAULT_ONSHAPE_STD_DOCUMENT_ID,
+      workspaceId:
+        options.onshapeWorkspaceId ??
+        map.workspaceId ??
+        DEFAULT_ONSHAPE_STD_WORKSPACE_ID,
+      elementsByName: map.elementsByName ?? {}
+    };
+  }
+
+  const graph = await buildGraph(options.root, onshapeSourceConfig);
   await ensureDirectory(options.out);
   await writeFile(options.out, `${JSON.stringify(graph, null, 2)}\n`, "utf8");
 
   console.log(`Indexed root: ${options.root}`);
   console.log(`Nodes: ${graph.elements.nodes.length}`);
   console.log(`Edges: ${graph.elements.edges.length}`);
+  if (options.onshapeMap && onshapeSourceConfig) {
+    const sourceLinkCount = graph.elements.nodes.filter(
+      (node) => typeof node.data.sourceUrl === "string" && node.data.sourceUrl.length > 0
+    ).length;
+    console.log(`Source links: ${sourceLinkCount}`);
+    console.log(`Onshape map: ${options.onshapeMap}`);
+  }
   console.log(`Wrote: ${options.out}`);
 }
 
