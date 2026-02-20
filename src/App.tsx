@@ -1021,7 +1021,9 @@ export default function App() {
       setError(null);
 
       try {
-        const response = await fetch("/graph.json", { signal: abort.signal });
+        const response = await fetch(`${import.meta.env.BASE_URL}graph.json`, {
+          signal: abort.signal
+        });
         if (!response.ok) {
           throw new Error(`Failed to load graph.json (${response.status})`);
         }
