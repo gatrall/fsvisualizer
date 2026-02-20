@@ -32,6 +32,20 @@ interface ViewportState {
   panY: number;
 }
 
+interface NavigationState {
+  nodeId: string | null;
+  viewMode: ViewMode | null;
+  layoutMode: LayoutMode | null;
+  scope: string | null;
+  search: string | null;
+  treeDepth: number | null;
+  hierarchyFolderPrefix: string | null;
+  showLabels: boolean | null;
+  showImportEdges: boolean | null;
+  showReexportEdges: boolean | null;
+  viewport: ViewportState | null;
+}
+
 const ALL_SCOPE = "__all__";
 const ROOT_SCOPE = "__root__";
 const UNRESOLVED_SCOPE = "__unresolved__";
@@ -357,6 +371,40 @@ function parseLayoutMode(value: string | null): LayoutMode | null {
   return null;
 }
 
+function parseBooleanValue(value: string | null): boolean | null {
+  if (value === null) {
+    return null;
+  }
+
+  const normalized = value.trim().toLowerCase();
+  if (normalized === "1" || normalized === "true") {
+    return true;
+  }
+
+  if (normalized === "0" || normalized === "false") {
+    return false;
+  }
+
+  return null;
+}
+
+function parseIntegerInRange(
+  value: string | null,
+  min: number,
+  max: number
+): number | null {
+  if (!value) {
+    return null;
+  }
+
+  const parsed = Number.parseInt(value, 10);
+  if (!Number.isFinite(parsed)) {
+    return null;
+  }
+
+  return Math.max(min, Math.min(max, parsed));
+}
+
 function clampViewportState(viewport: ViewportState): ViewportState {
   return {
     zoom: Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, viewport.zoom)),
@@ -375,6 +423,25 @@ function parseViewportState(value: unknown): ViewportState | null {
   const panX = typeof record.panX === "number" ? record.panX : NaN;
   const panY = typeof record.panY === "number" ? record.panY : NaN;
 
+  if (!Number.isFinite(zoom) || !Number.isFinite(panX) || !Number.isFinite(panY)) {
+    return null;
+  }
+
+  return clampViewportState({ zoom, panX, panY });
+}
+
+function parseViewportFromUrlParams(params: URLSearchParams): ViewportState | null {
+  const zoomText = params.get("z");
+  const panXText = params.get("px");
+  const panYText = params.get("py");
+
+  if (!zoomText || !panXText || !panYText) {
+    return null;
+  }
+
+  const zoom = Number.parseFloat(zoomText);
+  const panX = Number.parseFloat(panXText);
+  const panY = Number.parseFloat(panYText);
   if (!Number.isFinite(zoom) || !Number.isFinite(panX) || !Number.isFinite(panY)) {
     return null;
   }
@@ -406,23 +473,136 @@ function getNavigationFromHistoryState(stateValue: unknown): {
   nodeId: string | null;
   viewMode: ViewMode | null;
   layoutMode: LayoutMode | null;
+  scope: string | null;
+  search: string | null;
+  treeDepth: number | null;
+  hierarchyFolderPrefix: string | null;
+  showLabels: boolean | null;
+  showImportEdges: boolean | null;
+  showReexportEdges: boolean | null;
+  viewport: ViewportState | null;
 } {
+  const record =
+    stateValue && typeof stateValue === "object"
+      ? (stateValue as Record<string, unknown>)
+      : {};
+
   return {
-    nodeId:
-      stateValue && typeof stateValue === "object" && typeof (stateValue as Record<string, unknown>).nodeId === "string"
-        ? ((stateValue as Record<string, unknown>).nodeId as string)
-        : null,
+    nodeId: typeof record.nodeId === "string" ? record.nodeId : null,
     viewMode: parseViewMode(
-      stateValue && typeof stateValue === "object" && typeof (stateValue as Record<string, unknown>).viewMode === "string"
-        ? ((stateValue as Record<string, unknown>).viewMode as string)
-        : null
+      typeof record.viewMode === "string" ? record.viewMode : null
     ),
     layoutMode: parseLayoutMode(
-      stateValue && typeof stateValue === "object" && typeof (stateValue as Record<string, unknown>).layoutMode === "string"
-        ? ((stateValue as Record<string, unknown>).layoutMode as string)
-        : null
-    )
+      typeof record.layoutMode === "string" ? record.layoutMode : null
+    ),
+    scope: typeof record.scope === "string" ? record.scope : null,
+    search: typeof record.search === "string" ? record.search : null,
+    treeDepth: typeof record.treeDepth === "number" ? record.treeDepth : null,
+    hierarchyFolderPrefix:
+      typeof record.hierarchyFolderPrefix === "string"
+        ? record.hierarchyFolderPrefix
+        : null,
+    showLabels: typeof record.showLabels === "boolean" ? record.showLabels : null,
+    showImportEdges:
+      typeof record.showImportEdges === "boolean" ? record.showImportEdges : null,
+    showReexportEdges:
+      typeof record.showReexportEdges === "boolean" ? record.showReexportEdges : null,
+    viewport: parseViewportState(record.viewport)
   };
+}
+
+function getNavigationFromUrl(searchValue: string): NavigationState {
+  const params = new URLSearchParams(searchValue);
+
+  return {
+    nodeId: params.get("node"),
+    viewMode: parseViewMode(params.get("view")),
+    layoutMode: parseLayoutMode(params.get("layout")),
+    scope: params.get("scope"),
+    search: params.get("search"),
+    treeDepth: parseIntegerInRange(params.get("depth"), 1, 6),
+    hierarchyFolderPrefix: params.get("folder"),
+    showLabels: parseBooleanValue(params.get("labels")),
+    showImportEdges: parseBooleanValue(params.get("imports")),
+    showReexportEdges: parseBooleanValue(params.get("reexports")),
+    viewport: parseViewportFromUrlParams(params)
+  };
+}
+
+function formatViewportValue(value: number, decimals: number): string {
+  return value.toFixed(decimals).replace(/\.?0+$/, "");
+}
+
+function buildUrlFromNavigationState(state: {
+  nodeId: string | null;
+  viewMode: ViewMode;
+  layoutMode: LayoutMode;
+  scope: string;
+  search: string;
+  treeDepth: number;
+  hierarchyFolderPrefix: string;
+  showLabels: boolean;
+  showImportEdges: boolean;
+  showReexportEdges: boolean;
+  viewport: ViewportState | null;
+}): string {
+  const params = new URLSearchParams();
+
+  if (state.nodeId) {
+    params.set("node", state.nodeId);
+  }
+  if (state.viewMode !== DEFAULT_VIEW_MODE) {
+    params.set("view", state.viewMode);
+  }
+  if (state.layoutMode !== DEFAULT_LAYOUT_MODE) {
+    params.set("layout", state.layoutMode);
+  }
+  if (state.scope !== ALL_SCOPE) {
+    params.set("scope", state.scope);
+  }
+  if (state.search.trim().length > 0) {
+    params.set("search", state.search.trim());
+  }
+  if (state.treeDepth !== 3) {
+    params.set("depth", String(state.treeDepth));
+  }
+  if (state.hierarchyFolderPrefix.trim().length > 0) {
+    params.set("folder", state.hierarchyFolderPrefix);
+  }
+  if (!state.showLabels) {
+    params.set("labels", "0");
+  }
+  if (!state.showImportEdges) {
+    params.set("imports", "0");
+  }
+  if (!state.showReexportEdges) {
+    params.set("reexports", "0");
+  }
+  if (state.viewport) {
+    params.set("z", formatViewportValue(state.viewport.zoom, 4));
+    params.set("px", formatViewportValue(state.viewport.panX, 1));
+    params.set("py", formatViewportValue(state.viewport.panY, 1));
+  }
+
+  const query = params.toString();
+  const queryPart = query ? `?${query}` : "";
+  if (typeof window === "undefined") {
+    return queryPart;
+  }
+
+  return `${window.location.pathname}${queryPart}${window.location.hash}`;
+}
+
+function viewportStatesEqual(a: ViewportState | null, b: ViewportState | null): boolean {
+  if (!a && !b) {
+    return true;
+  }
+
+  if (!a || !b) {
+    return false;
+  }
+
+  return a.zoom === b.zoom && a.panX === b.panX && a.panY === b.panY;
 }
 
 function getBaseLabelSize(
@@ -929,21 +1109,47 @@ export default function App() {
       window.history.state && typeof window.history.state === "object"
         ? (window.history.state as Record<string, unknown>)
         : {};
+    const currentNavigation = getNavigationFromHistoryState(currentState);
+    const urlNavigation = getNavigationFromUrl(window.location.search);
     const viewport = getViewportState(cy);
+    const url = new URL(window.location.href);
+    url.searchParams.set("z", formatViewportValue(viewport.zoom, 4));
+    url.searchParams.set("px", formatViewportValue(viewport.panX, 1));
+    url.searchParams.set("py", formatViewportValue(viewport.panY, 1));
     const nextState: Record<string, unknown> = {
       ...currentState,
-      nodeId: selectedId,
-      viewMode: viewModeRef.current,
-      layoutMode: layoutModeRef.current,
+      nodeId: urlNavigation.nodeId ?? currentNavigation.nodeId ?? selectedId,
+      viewMode:
+        urlNavigation.viewMode ?? currentNavigation.viewMode ?? viewModeRef.current,
+      layoutMode:
+        urlNavigation.layoutMode ??
+        currentNavigation.layoutMode ??
+        layoutModeRef.current,
+      scope: urlNavigation.scope ?? currentNavigation.scope ?? scope,
+      search: urlNavigation.search ?? currentNavigation.search ?? search,
+      treeDepth: urlNavigation.treeDepth ?? currentNavigation.treeDepth ?? treeDepth,
+      hierarchyFolderPrefix:
+        urlNavigation.hierarchyFolderPrefix ??
+        currentNavigation.hierarchyFolderPrefix ??
+        hierarchyFolderPrefix,
+      showLabels:
+        urlNavigation.showLabels ?? currentNavigation.showLabels ?? showLabels,
+      showImportEdges:
+        urlNavigation.showImportEdges ??
+        currentNavigation.showImportEdges ??
+        showImportEdges,
+      showReexportEdges:
+        urlNavigation.showReexportEdges ??
+        currentNavigation.showReexportEdges ??
+        showReexportEdges,
       viewport
     };
 
-    if (selectedId === null) {
+    if (nextState.nodeId === null) {
       delete nextState.nodeId;
     }
 
-    const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
-    window.history.replaceState(nextState, "", currentUrl);
+    window.history.replaceState(nextState, "", `${url.pathname}${url.search}${url.hash}`);
   }
 
   function scheduleViewportPersistence(): void {
@@ -1066,19 +1272,47 @@ export default function App() {
 
         const data = (await response.json()) as GraphJson;
         setGraph(data);
-        updateViewMode(DEFAULT_VIEW_MODE, "none");
-        updateLayoutMode(DEFAULT_LAYOUT_MODE, "none");
+        const urlNavigation =
+          typeof window !== "undefined"
+            ? getNavigationFromUrl(window.location.search)
+            : {
+                nodeId: null,
+                viewMode: null,
+                layoutMode: null,
+                scope: null,
+                search: null,
+                treeDepth: null,
+                hierarchyFolderPrefix: null,
+                showLabels: null,
+                showImportEdges: null,
+                showReexportEdges: null,
+                viewport: null
+              };
 
-        if (typeof window !== "undefined") {
-          const cleanUrl = `${window.location.pathname}${window.location.hash}`;
-          window.history.replaceState({}, "", cleanUrl);
-        }
+        setSearch(urlNavigation.search ?? "");
+        setScope(urlNavigation.scope ?? ALL_SCOPE);
+        setTreeDepth(urlNavigation.treeDepth ?? 3);
+        setHierarchyFolderPrefix(urlNavigation.hierarchyFolderPrefix ?? "");
+        setShowLabels(urlNavigation.showLabels ?? true);
+        setShowImportEdges(urlNavigation.showImportEdges ?? true);
+        setShowReexportEdges(urlNavigation.showReexportEdges ?? true);
+        updateViewMode(urlNavigation.viewMode ?? DEFAULT_VIEW_MODE, "none");
+        updateLayoutMode(urlNavigation.layoutMode ?? DEFAULT_LAYOUT_MODE, "none");
 
-        pendingViewportRestoreRef.current = null;
+        pendingViewportRestoreRef.current = urlNavigation.viewport;
 
-        const initialNodeId = chooseDefaultNodeId(data);
+        const initialNodeId =
+          urlNavigation.nodeId &&
+          data.elements.nodes.some((node) => node.data.id === urlNavigation.nodeId)
+            ? urlNavigation.nodeId
+            : chooseDefaultNodeId(data);
         if (initialNodeId) {
-          updateSelectedNode(initialNodeId, "replace", false, true);
+          updateSelectedNode(
+            initialNodeId,
+            "replace",
+            false,
+            urlNavigation.viewport === null
+          );
         } else {
           updateSelectedNode(null, "replace");
         }
@@ -1111,12 +1345,31 @@ export default function App() {
           ? (event.state as Record<string, unknown>)
           : undefined;
       const historyNavigation = getNavigationFromHistoryState(stateValue);
+      const urlNavigation = getNavigationFromUrl(window.location.search);
 
-      const fromStateViewport = parseViewportState(stateValue?.viewport);
+      const fromStateViewport = urlNavigation.viewport ?? historyNavigation.viewport;
 
-      const nextViewMode = historyNavigation.viewMode ?? DEFAULT_VIEW_MODE;
-      const nextLayoutMode = historyNavigation.layoutMode ?? DEFAULT_LAYOUT_MODE;
-      const requestedNode = historyNavigation.nodeId;
+      const nextViewMode =
+        urlNavigation.viewMode ?? historyNavigation.viewMode ?? DEFAULT_VIEW_MODE;
+      const nextLayoutMode =
+        urlNavigation.layoutMode ?? historyNavigation.layoutMode ?? DEFAULT_LAYOUT_MODE;
+      const requestedNode = urlNavigation.nodeId ?? historyNavigation.nodeId;
+
+      setSearch(urlNavigation.search ?? historyNavigation.search ?? "");
+      setScope(urlNavigation.scope ?? historyNavigation.scope ?? ALL_SCOPE);
+      setTreeDepth(urlNavigation.treeDepth ?? historyNavigation.treeDepth ?? 3);
+      setHierarchyFolderPrefix(
+        urlNavigation.hierarchyFolderPrefix ??
+          historyNavigation.hierarchyFolderPrefix ??
+          ""
+      );
+      setShowLabels(urlNavigation.showLabels ?? historyNavigation.showLabels ?? true);
+      setShowImportEdges(
+        urlNavigation.showImportEdges ?? historyNavigation.showImportEdges ?? true
+      );
+      setShowReexportEdges(
+        urlNavigation.showReexportEdges ?? historyNavigation.showReexportEdges ?? true
+      );
 
       pendingViewportRestoreRef.current = fromStateViewport;
       scheduleViewportFallbackRestore();
@@ -1147,22 +1400,31 @@ export default function App() {
     const action = pendingHistoryActionRef.current;
     pendingHistoryActionRef.current = "none";
 
-    if (action === "none") {
-      return;
-    }
-
     const currentState =
       window.history.state && typeof window.history.state === "object"
         ? (window.history.state as Record<string, unknown>)
         : {};
     const currentNavigation = getNavigationFromHistoryState(currentState);
+    const urlNavigation = getNavigationFromUrl(window.location.search);
     const cy = cyRef.current;
-    const viewport = cy ? getViewportState(cy) : parseViewportState(currentState.viewport);
+    const viewport =
+      cy
+        ? getViewportState(cy)
+        : urlNavigation.viewport ??
+          currentNavigation.viewport ??
+          parseViewportState(currentState.viewport);
     const nextState: Record<string, unknown> = {
       ...currentState,
       nodeId: selectedId,
       viewMode,
       layoutMode,
+      scope,
+      search,
+      treeDepth,
+      hierarchyFolderPrefix,
+      showLabels,
+      showImportEdges,
+      showReexportEdges,
       viewport
     };
 
@@ -1170,21 +1432,70 @@ export default function App() {
       delete nextState.nodeId;
     }
 
+    const nextUrl = buildUrlFromNavigationState({
+      nodeId: selectedId,
+      viewMode,
+      layoutMode,
+      scope,
+      search,
+      treeDepth,
+      hierarchyFolderPrefix,
+      showLabels,
+      showImportEdges,
+      showReexportEdges,
+      viewport
+    });
+    const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+
     const sameNode = currentNavigation.nodeId === selectedId;
     const sameView = currentNavigation.viewMode === viewMode;
     const sameLayout = currentNavigation.layoutMode === layoutMode;
-    const sameHistoryState = sameNode && sameView && sameLayout;
-    const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+    const sameScope = (currentNavigation.scope ?? ALL_SCOPE) === scope;
+    const sameSearch = (currentNavigation.search ?? "") === search;
+    const sameTreeDepth = (currentNavigation.treeDepth ?? 3) === treeDepth;
+    const sameHierarchyFolder =
+      (currentNavigation.hierarchyFolderPrefix ?? "") === hierarchyFolderPrefix;
+    const sameLabels = (currentNavigation.showLabels ?? true) === showLabels;
+    const sameImportEdges =
+      (currentNavigation.showImportEdges ?? true) === showImportEdges;
+    const sameReexportEdges =
+      (currentNavigation.showReexportEdges ?? true) === showReexportEdges;
+    const currentViewport =
+      currentNavigation.viewport ?? parseViewportState(currentState.viewport);
+    const sameViewport = viewportStatesEqual(currentViewport, viewport);
+    const sameHistoryState =
+      sameNode &&
+      sameView &&
+      sameLayout &&
+      sameScope &&
+      sameSearch &&
+      sameTreeDepth &&
+      sameHierarchyFolder &&
+      sameLabels &&
+      sameImportEdges &&
+      sameReexportEdges &&
+      sameViewport;
 
     if (action === "push" && !sameHistoryState) {
-      window.history.pushState(nextState, "", currentUrl);
+      window.history.pushState(nextState, "", nextUrl);
       return;
     }
 
-    if (action === "replace" && !sameHistoryState) {
-      window.history.replaceState(nextState, "", currentUrl);
+    if (action === "replace" || !sameHistoryState || nextUrl !== currentUrl) {
+      window.history.replaceState(nextState, "", nextUrl);
     }
-  }, [selectedId, viewMode, layoutMode]);
+  }, [
+    selectedId,
+    viewMode,
+    layoutMode,
+    scope,
+    search,
+    treeDepth,
+    hierarchyFolderPrefix,
+    showLabels,
+    showImportEdges,
+    showReexportEdges
+  ]);
 
   useEffect(() => {
     if (nodeOrder.length === 0) {
