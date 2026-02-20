@@ -30,6 +30,8 @@ npm run onshape-map -- --out tools/onshape-element-map.json
 npm run index -- --root /path/to/onshape-std-library-mirror --onshape-map tools/onshape-element-map.json
 ```
 
+This repo already includes `tools/onshape-element-map.json` for the current standard-library document/workspace, and the GitHub Pages workflow uses it when regenerating `public/graph.json`.
+
 ## Run Dev UI
 
 ```bash

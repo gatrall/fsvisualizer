@@ -1,6 +1,6 @@
 {
   "root": "/Users/simon/code/onshape-fs/onshape-std-library-mirror",
-  "generatedAt": "2026-02-20T22:06:35.268Z",
+  "generatedAt": "2026-02-20T22:08:19.045Z",
   "elements": {
     "nodes": [
       {
@@ -9,6 +9,7 @@
           "label": "annotationdimensiondirection.gen.fs",
           "filePath": "annotationdimensiondirection.gen.fs",
           "modulePath": "onshape/std/annotationdimensiondirection.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/14cd44cff0d2a2cb8a86d1c1",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -28,6 +29,7 @@
           "label": "approximationUtils.fs",
           "filePath": "approximationUtils.fs",
           "modulePath": "onshape/std/approximationUtils.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/866b111842256978398f3f88",
           "imports": [
             "onshape/std/valueBounds.fs",
             "onshape/std/feature.fs",
@@ -107,6 +109,7 @@
           "label": "assignReleaseTypeTags.fs",
           "filePath": "assignReleaseTypeTags.fs",
           "modulePath": "assignReleaseTypeTags.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/258b0b0212720a0c89ecdd13",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/metadata.fs",
@@ -141,6 +144,7 @@
           "label": "attributes.fs",
           "filePath": "attributes.fs",
           "modulePath": "onshape/std/attributes.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/04aff5b9a2244f448a633205",
           "imports": [
             "onshape/std/context.fs",
             "onshape/std/query.fs",
@@ -236,6 +240,7 @@
           "label": "blendcontroltype.gen.fs",
           "filePath": "blendcontroltype.gen.fs",
           "modulePath": "onshape/std/blendcontroltype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/4b5adc449948fd96ab7b2e1b",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -262,6 +267,7 @@
           "label": "bodyDraft.fs",
           "filePath": "bodyDraft.fs",
           "modulePath": "onshape/std/bodyDraft.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/cebb5b9425eb0c894549cfdf",
           "imports": [
             "onshape/std/evaluate.fs",
             "onshape/std/feature.fs",
@@ -311,6 +317,7 @@
           "label": "bodydraftconcaverepairtype.gen.fs",
           "filePath": "bodydraftconcaverepairtype.gen.fs",
           "modulePath": "onshape/std/bodydraftconcaverepairtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/6f3781e74e241c330b4480d7",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -334,6 +341,7 @@
           "label": "bodydraftcornertype.gen.fs",
           "filePath": "bodydraftcornertype.gen.fs",
           "modulePath": "onshape/std/bodydraftcornertype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/10ee30cef89d3f3f4908e3e7",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -357,6 +365,7 @@
           "label": "bodydraftmatchfacetype.gen.fs",
           "filePath": "bodydraftmatchfacetype.gen.fs",
           "modulePath": "onshape/std/bodydraftmatchfacetype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/c351c3facfa5c6938b7a8f63",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -380,6 +389,7 @@
           "label": "bodydraftselectiontype.gen.fs",
           "filePath": "bodydraftselectiontype.gen.fs",
           "modulePath": "onshape/std/bodydraftselectiontype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/f919d50f8fe7d662de09fbbb",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -403,6 +413,7 @@
           "label": "boolean.fs",
           "filePath": "boolean.fs",
           "modulePath": "onshape/std/boolean.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/4eea9f271b60454e84089e38",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/box.fs",
@@ -586,6 +597,7 @@
           "label": "booleanaccuracy.gen.fs",
           "filePath": "booleanaccuracy.gen.fs",
           "modulePath": "onshape/std/booleanaccuracy.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/4070cc366938c64499892e78",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -610,6 +622,7 @@
           "label": "booleanHeuristics.fs",
           "filePath": "booleanHeuristics.fs",
           "modulePath": "onshape/std/booleanHeuristics.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/59a21e80a2f05753eb21c70e",
           "imports": [
             "onshape/std/box.fs",
             "onshape/std/clashtype.gen.fs",
@@ -676,6 +689,7 @@
           "label": "booleanoperationtype.gen.fs",
           "filePath": "booleanoperationtype.gen.fs",
           "modulePath": "onshape/std/booleanoperationtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/458197f69d22454caef8f701",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -710,6 +724,7 @@
           "label": "boundingtype.gen.fs",
           "filePath": "boundingtype.gen.fs",
           "modulePath": "onshape/std/boundingtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/0ef5bec0909d4235a5ca1ebb",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -739,6 +754,7 @@
           "label": "box.fs",
           "filePath": "box.fs",
           "modulePath": "onshape/std/box.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/dbae58dc711e4c148a8f4353",
           "imports": [
             "onshape/std/units.fs",
             "onshape/std/vector.fs",
@@ -814,6 +830,7 @@
           "label": "bridgingCurve.fs",
           "filePath": "bridgingCurve.fs",
           "modulePath": "onshape/std/bridgingCurve.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/03857d67401e3f3d767eaa44",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/coordSystem.fs",
@@ -871,6 +888,7 @@
           "label": "bsurf.fs",
           "filePath": "bsurf.fs",
           "modulePath": "onshape/std/bsurf.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/7955b08eb2ab7d8c4c409c0b",
           "imports": [
             "onshape/std/boolean.fs",
             "onshape/std/booleanHeuristics.fs",
@@ -923,6 +941,7 @@
           "label": "chamfer.fs",
           "filePath": "chamfer.fs",
           "modulePath": "onshape/std/chamfer.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/8d291ab8b5d84af88a07a6cd",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/feature.fs",
@@ -972,6 +991,7 @@
           "label": "chamfermethod.gen.fs",
           "filePath": "chamfermethod.gen.fs",
           "modulePath": "onshape/std/chamfermethod.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/b57d9d612a5ba5b490ff98df",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -996,6 +1016,7 @@
           "label": "chamfertype.gen.fs",
           "filePath": "chamfertype.gen.fs",
           "modulePath": "onshape/std/chamfertype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/6dbd5a85782144a68bcdd4db",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -1020,6 +1041,7 @@
           "label": "circularPattern.fs",
           "filePath": "circularPattern.fs",
           "modulePath": "onshape/std/circularPattern.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/5e639eb1b1834188ae46203a",
           "imports": [
             "onshape/std/curveGeometry.fs",
             "onshape/std/manipulator.fs",
@@ -1058,6 +1080,7 @@
           "label": "clashtype.gen.fs",
           "filePath": "clashtype.gen.fs",
           "modulePath": "onshape/std/clashtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/62e408d723ce415b958f3270",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -1083,6 +1106,7 @@
           "label": "common.fs",
           "filePath": "common.fs",
           "modulePath": "onshape/std/common.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/5d4b86cd6796d30dca2fb617",
           "imports": [],
           "reexports": [
             "onshape/std/context.fs",
@@ -1190,6 +1214,7 @@
           "label": "compositeCurve.fs",
           "filePath": "compositeCurve.fs",
           "modulePath": "onshape/std/compositeCurve.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/04fc7c26c5fbe950ba242b24",
           "imports": [
             "onshape/std/feature.fs",
             "onshape/std/topologyUtils.fs",
@@ -1221,6 +1246,7 @@
           "label": "compositePart.fs",
           "filePath": "compositePart.fs",
           "modulePath": "onshape/std/compositePart.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/ba252ebdab84a97088b88bd9",
           "imports": [
             "onshape/std/feature.fs",
             "onshape/std/transform.fs"
@@ -1250,6 +1276,7 @@
           "label": "computedPartProperty.fs",
           "filePath": "computedPartProperty.fs",
           "modulePath": "onshape/std/computedPartProperty.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/6e1e18c111c51ba0fb767516",
           "imports": [],
           "reexports": [
             "onshape/std/context.fs",
@@ -1283,6 +1310,7 @@
           "label": "constrainedSurface.fs",
           "filePath": "constrainedSurface.fs",
           "modulePath": "onshape/std/constrainedSurface.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/0e71899789a4f9231b17a016",
           "imports": [
             "onshape/std/feature.fs",
             "onshape/std/valueBounds.fs",
@@ -1322,6 +1350,7 @@
           "label": "constrainttype.gen.fs",
           "filePath": "constrainttype.gen.fs",
           "modulePath": "onshape/std/constrainttype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/b4277d7ee5ca49a493856c34",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -1345,6 +1374,7 @@
           "label": "containers.fs",
           "filePath": "containers.fs",
           "modulePath": "onshape/std/containers.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/68f58bc3409644b79ccc306c",
           "imports": [
             "onshape/std/math.fs",
             "onshape/std/string.fs"
@@ -1815,6 +1845,7 @@
           "label": "context.fs",
           "filePath": "context.fs",
           "modulePath": "onshape/std/context.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/1ccf6e5321844da29ab72f2b",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/string.fs"
@@ -1959,6 +1990,7 @@
           "label": "coordinatesysteminferenceselectionfilter.gen.fs",
           "filePath": "coordinatesysteminferenceselectionfilter.gen.fs",
           "modulePath": "coordinatesysteminferenceselectionfilter.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/2d55424659249567edeb7591",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -1978,6 +2010,7 @@
           "label": "coordSystem.fs",
           "filePath": "coordSystem.fs",
           "modulePath": "onshape/std/coordSystem.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/7cc6550b0f384f49bb43e8b1",
           "imports": [
             "onshape/std/mathUtils.fs",
             "onshape/std/units.fs"
@@ -2164,6 +2197,7 @@
           "label": "cosmeticThreadUtils.fs",
           "filePath": "cosmeticThreadUtils.fs",
           "modulePath": "onshape/std/cosmeticThreadUtils.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/c50a2de7090e9ec488a22124",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/context.fs",
@@ -2211,6 +2245,7 @@
           "label": "cplane.fs",
           "filePath": "cplane.fs",
           "modulePath": "onshape/std/cplane.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/577e2aaf45a542f98d9343c7",
           "imports": [
             "onshape/std/box.fs",
             "onshape/std/containers.fs",
@@ -2259,6 +2294,7 @@
           "label": "cpoint.fs",
           "filePath": "cpoint.fs",
           "modulePath": "onshape/std/cpoint.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/40fb33d37822745ebb0fc59a",
           "imports": [
             "onshape/std/evaluate.fs",
             "onshape/std/feature.fs",
@@ -2295,6 +2331,7 @@
           "label": "curveextensionendcondition.gen.fs",
           "filePath": "curveextensionendcondition.gen.fs",
           "modulePath": "onshape/std/curveextensionendcondition.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/c5cc20b1e416ba6ab71038f4",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -2318,6 +2355,7 @@
           "label": "curveextensionshape.gen.fs",
           "filePath": "curveextensionshape.gen.fs",
           "modulePath": "onshape/std/curveextensionshape.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/0df23d40124f2566acd6f09d",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -2341,6 +2379,7 @@
           "label": "curveGeometry.fs",
           "filePath": "curveGeometry.fs",
           "modulePath": "onshape/std/curveGeometry.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/c5ff8113357f488da64dfc2a",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/coordSystem.fs",
@@ -2573,6 +2612,7 @@
           "label": "curvePattern.fs",
           "filePath": "curvePattern.fs",
           "modulePath": "onshape/std/curvePattern.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/d33f2b9b87e40fff6596b80f",
           "imports": [
             "onshape/std/curveGeometry.fs",
             "onshape/std/manipulator.fs",
@@ -2620,6 +2660,7 @@
           "label": "curvepatternorientationtype.gen.fs",
           "filePath": "curvepatternorientationtype.gen.fs",
           "modulePath": "onshape/std/curvepatternorientationtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/c265ab474c24de479b469e02",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -2643,6 +2684,7 @@
           "label": "curvetype.gen.fs",
           "filePath": "curvetype.gen.fs",
           "modulePath": "onshape/std/curvetype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/9019dcd8c8524b0d898d2a74",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -2662,6 +2704,7 @@
           "label": "cutlist.fs",
           "filePath": "cutlist.fs",
           "modulePath": "onshape/std/cutlist.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/f732ce3a84eca6a45ebfd598",
           "imports": [
             "onshape/std/booleanoperationtype.gen.fs",
             "onshape/std/cutlistMath.fs",
@@ -2706,6 +2749,7 @@
           "label": "cutlistMath.fs",
           "filePath": "cutlistMath.fs",
           "modulePath": "onshape/std/cutlistMath.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/95b1f2bf24198aafa38b6808",
           "imports": [
             "onshape/std/box.fs",
             "onshape/std/containers.fs",
@@ -2756,6 +2800,7 @@
           "label": "cylinderCast.fs",
           "filePath": "cylinderCast.fs",
           "modulePath": "onshape/std/cylinderCast.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/a519511812bf1a44bb19b326",
           "imports": [
             "onshape/std/boolean.fs",
             "onshape/std/boundingtype.gen.fs",
@@ -2815,6 +2860,7 @@
           "label": "debug.fs",
           "filePath": "debug.fs",
           "modulePath": "onshape/std/debug.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/46edea06688f450f801961e1",
           "imports": [
             "onshape/std/box.fs",
             "onshape/std/containers.fs",
@@ -2905,6 +2951,7 @@
           "label": "debugcolor.gen.fs",
           "filePath": "debugcolor.gen.fs",
           "modulePath": "onshape/std/debugcolor.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/553f26e6997e9c4d2dbfc01a",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -2928,6 +2975,7 @@
           "label": "decal.fs",
           "filePath": "decal.fs",
           "modulePath": "onshape/std/decal.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/41e56a448fe368d294e6cfe3",
           "imports": [
             "onshape/std/common.fs",
             "onshape/std/decalUtils.fs",
@@ -2965,6 +3013,7 @@
           "label": "decalUtils.fs",
           "filePath": "decalUtils.fs",
           "modulePath": "onshape/std/decalUtils.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/d287770bb73c895b3b615958",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/containers.fs",
@@ -3057,6 +3106,7 @@
           "label": "defaultFeatures.fs",
           "filePath": "defaultFeatures.fs",
           "modulePath": "onshape/std/defaultFeatures.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/02ce59846cd14e99b4ce227f",
           "imports": [
             "onshape/std/feature.fs",
             "onshape/std/surfaceGeometry.fs",
@@ -3105,6 +3155,7 @@
           "label": "deleteBodies.fs",
           "filePath": "deleteBodies.fs",
           "modulePath": "onshape/std/deleteBodies.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/8ea6664e4ccf48efa0ec6ce2",
           "imports": [
             "onshape/std/feature.fs"
           ],
@@ -3138,6 +3189,7 @@
           "label": "deleteFace.fs",
           "filePath": "deleteFace.fs",
           "modulePath": "onshape/std/deleteFace.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/4fcf9f158a8e4eaebda661f4",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/evaluate.fs",
@@ -3173,6 +3225,7 @@
           "label": "derive.fs",
           "filePath": "derive.fs",
           "modulePath": "onshape/std/derive.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/5538e2f5fb92312cfea27f97",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/containers.fs",
@@ -3230,6 +3283,7 @@
           "label": "derivedMirror.fs",
           "filePath": "derivedMirror.fs",
           "modulePath": "onshape/std/derivedMirror.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/41bb1f0e9c96bc56c4f1e215",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/derive.fs",
@@ -3277,6 +3331,7 @@
           "label": "dimensionalignment.gen.fs",
           "filePath": "dimensionalignment.gen.fs",
           "modulePath": "onshape/std/dimensionalignment.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/56b23d28eb3a49ceb2b6b290",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -3296,6 +3351,7 @@
           "label": "dimensionhalfspace.gen.fs",
           "filePath": "dimensionhalfspace.gen.fs",
           "modulePath": "onshape/std/dimensionhalfspace.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/7a7990302d2c450e863d4164",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -3315,6 +3371,7 @@
           "label": "draft.fs",
           "filePath": "draft.fs",
           "modulePath": "onshape/std/draft.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/69e25c53fc3840eca5893b85",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/coordSystem.fs",
@@ -3366,6 +3423,7 @@
           "label": "drafttype.gen.fs",
           "filePath": "drafttype.gen.fs",
           "modulePath": "onshape/std/drafttype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/ee7a59aedbfdfb0ed5e87949",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -3390,6 +3448,7 @@
           "label": "edgeBlendCommon.fs",
           "filePath": "edgeBlendCommon.fs",
           "modulePath": "onshape/std/edgeBlendCommon.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/ecf7740dba703fd61ba84038",
           "imports": [
             "onshape/std/blendcontroltype.gen.fs",
             "onshape/std/chamfermethod.gen.fs",
@@ -3468,6 +3527,7 @@
           "label": "edgeconvexitytype.gen.fs",
           "filePath": "edgeconvexitytype.gen.fs",
           "modulePath": "onshape/std/edgeconvexitytype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/ed47acca7fc140c796595b77",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -3494,6 +3554,7 @@
           "label": "edgetopology.gen.fs",
           "filePath": "edgetopology.gen.fs",
           "modulePath": "onshape/std/edgetopology.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/af1d60c24362507aae5a09af",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -3517,6 +3578,7 @@
           "label": "editCurve.fs",
           "filePath": "editCurve.fs",
           "modulePath": "onshape/std/editCurve.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/9e177b6999d0e4da576abc02",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/coordSystem.fs",
@@ -3574,6 +3636,7 @@
           "label": "enclose.fs",
           "filePath": "enclose.fs",
           "modulePath": "onshape/std/enclose.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/2428edff99ccc9ebb781f4fa",
           "imports": [
             "onshape/std/feature.fs"
           ],
@@ -3603,6 +3666,7 @@
           "label": "endcap.fs",
           "filePath": "endcap.fs",
           "modulePath": "onshape/std/endcap.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/22b6c23a9268d979e22f8344",
           "imports": [
             "onshape/std/boundingtype.gen.fs",
             "onshape/std/booleanoperationtype.gen.fs",
@@ -3676,6 +3740,7 @@
           "label": "entityinferencetype.gen.fs",
           "filePath": "entityinferencetype.gen.fs",
           "modulePath": "onshape/std/entityinferencetype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/61326602c16b4de1a2f15114",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -3699,6 +3764,7 @@
           "label": "error.fs",
           "filePath": "error.fs",
           "modulePath": "onshape/std/error.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/6d8fa7fc7bf040cb8c5e725c",
           "imports": [
             "onshape/std/context.fs",
             "onshape/std/containers.fs",
@@ -3827,6 +3893,7 @@
           "label": "errorstringenum.gen.fs",
           "filePath": "errorstringenum.gen.fs",
           "modulePath": "onshape/std/errorstringenum.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/ec3745f97ea14e0d875f0a48",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -3851,6 +3918,7 @@
           "label": "evaluate.fs",
           "filePath": "evaluate.fs",
           "modulePath": "onshape/std/evaluate.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/4864e7b2fe044ae09e6406cf",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/context.fs",
@@ -4376,6 +4444,7 @@
           "label": "expressionvalidationresult.gen.fs",
           "filePath": "expressionvalidationresult.gen.fs",
           "modulePath": "onshape/std/expressionvalidationresult.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/c3900fd0a95f4cb0aa7dd6f0",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -4399,6 +4468,7 @@
           "label": "extend.fs",
           "filePath": "extend.fs",
           "modulePath": "onshape/std/extend.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/cffdc47ca3931d4c4d41ee51",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/evaluate.fs",
@@ -4452,6 +4522,7 @@
           "label": "extendendtype.gen.fs",
           "filePath": "extendendtype.gen.fs",
           "modulePath": "onshape/std/extendendtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/8ad5cf2c67a019114002f15c",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -4475,6 +4546,7 @@
           "label": "extendsheetboundingtype.gen.fs",
           "filePath": "extendsheetboundingtype.gen.fs",
           "modulePath": "onshape/std/extendsheetboundingtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/0c85e37b662a77ca46ad940f",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -4499,6 +4571,7 @@
           "label": "extendsheetshapetype.gen.fs",
           "filePath": "extendsheetshapetype.gen.fs",
           "modulePath": "onshape/std/extendsheetshapetype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/d76ca8714bce6d2c72fb8131",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -4522,6 +4595,7 @@
           "label": "externalThread.fs",
           "filePath": "externalThread.fs",
           "modulePath": "onshape/std/externalThread.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/8f7e7d79e6648ba1cd48b5fd",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/containers.fs",
@@ -4597,6 +4671,7 @@
           "label": "extractsurfaceredundancytype.gen.fs",
           "filePath": "extractsurfaceredundancytype.gen.fs",
           "modulePath": "onshape/std/extractsurfaceredundancytype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/981b1edf748327b62be0f486",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -4616,6 +4691,7 @@
           "label": "extrude.fs",
           "filePath": "extrude.fs",
           "modulePath": "onshape/std/extrude.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/aff9bec3150a48098a8184ac",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/boolean.fs",
@@ -4700,6 +4776,7 @@
           "label": "extrudeCommon.fs",
           "filePath": "extrudeCommon.fs",
           "modulePath": "onshape/std/extrudeCommon.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/779e4e2168dfbdd421cdf6ed",
           "imports": [
             "onshape/std/curveGeometry.fs",
             "onshape/std/evaluate.fs",
@@ -4816,6 +4893,7 @@
           "label": "faceBlend.fs",
           "filePath": "faceBlend.fs",
           "modulePath": "onshape/std/faceBlend.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/9f2dfffe1ba4d5a357d83099",
           "imports": [
             "onshape/std/evaluate.fs",
             "onshape/std/feature.fs",
@@ -4866,6 +4944,7 @@
           "label": "faceblendcrosssection.gen.fs",
           "filePath": "faceblendcrosssection.gen.fs",
           "modulePath": "onshape/std/faceblendcrosssection.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/531ae7279a60c99e46c5fb03",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -4889,6 +4968,7 @@
           "label": "faceblendcrosssectionshape.gen.fs",
           "filePath": "faceblendcrosssectionshape.gen.fs",
           "modulePath": "onshape/std/faceblendcrosssectionshape.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/7548755d6263fc37f1993d7f",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -4912,6 +4992,7 @@
           "label": "faceblendpropagation.gen.fs",
           "filePath": "faceblendpropagation.gen.fs",
           "modulePath": "onshape/std/faceblendpropagation.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/326b6b23c00fd2d6b77b1b5d",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -4935,6 +5016,7 @@
           "label": "faceblendtrimtype.gen.fs",
           "filePath": "faceblendtrimtype.gen.fs",
           "modulePath": "onshape/std/faceblendtrimtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/154110871053d4250547ffb6",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -4958,6 +5040,7 @@
           "label": "facecurvecreationtype.gen.fs",
           "filePath": "facecurvecreationtype.gen.fs",
           "modulePath": "onshape/std/facecurvecreationtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/f30ef368b5fcbfed8cd593ff",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -4982,6 +5065,7 @@
           "label": "faceIntersection.fs",
           "filePath": "faceIntersection.fs",
           "modulePath": "onshape/std/faceIntersection.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/dc2d374abbf6776a636c848b",
           "imports": [
             "onshape/std/feature.fs",
             "onshape/std/approximationUtils.fs"
@@ -5007,6 +5091,7 @@
           "label": "faulttype.gen.fs",
           "filePath": "faulttype.gen.fs",
           "modulePath": "faulttype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/3a22cca2851e702aef942896",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -5026,6 +5111,7 @@
           "label": "feature.fs",
           "filePath": "feature.fs",
           "modulePath": "onshape/std/feature.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/c2e68972a0b14c709954d6ca",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/math.fs",
@@ -5543,6 +5629,7 @@
           "label": "featuredimensiontype.gen.fs",
           "filePath": "featuredimensiontype.gen.fs",
           "modulePath": "onshape/std/featuredimensiontype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/0340b1e467fab93c6747cac2",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -5566,6 +5653,7 @@
           "label": "featureList.fs",
           "filePath": "featureList.fs",
           "modulePath": "onshape/std/featureList.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/532a337c28a6fe5a6eacd744",
           "imports": [
             "onshape/std/context.fs"
           ],
@@ -5607,6 +5695,7 @@
           "label": "featurescriptversionnumber.gen.fs",
           "filePath": "featurescriptversionnumber.gen.fs",
           "modulePath": "onshape/std/featurescriptversionnumber.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/5a4cf616e5b14bcbb03154b9",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -5634,6 +5723,7 @@
           "label": "fieldweldflag.gen.fs",
           "filePath": "fieldweldflag.gen.fs",
           "modulePath": "onshape/std/fieldweldflag.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/72643a56d320ff3bddb57e51",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -5653,6 +5743,7 @@
           "label": "fillet.fs",
           "filePath": "fillet.fs",
           "modulePath": "onshape/std/fillet.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/841b26d2621a46bf98eda1d5",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/edgeconvexitytype.gen.fs",
@@ -5728,6 +5819,7 @@
           "label": "filletcrosssection.gen.fs",
           "filePath": "filletcrosssection.gen.fs",
           "modulePath": "onshape/std/filletcrosssection.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/bb1ba1f029e6a4913b720824",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -5753,6 +5845,7 @@
           "label": "fillSurface.fs",
           "filePath": "fillSurface.fs",
           "modulePath": "onshape/std/fillSurface.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/1609b2014b90745ff149a187",
           "imports": [
             "onshape/std/boolean.fs",
             "onshape/std/containers.fs",
@@ -5799,6 +5892,7 @@
           "label": "fitSpline.fs",
           "filePath": "fitSpline.fs",
           "modulePath": "onshape/std/fitSpline.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/6e8d96a622de0a7cfb5ddac1",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/evaluate.fs",
@@ -5845,6 +5939,7 @@
           "label": "fittolerancetables.gen.fs",
           "filePath": "fittolerancetables.gen.fs",
           "modulePath": "onshape/std/fittolerancetables.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/63547d9b2ad0954575543f68",
           "imports": [
             "onshape/std/units.fs",
             "onshape/std/lookupTablePath.fs",
@@ -5888,6 +5983,7 @@
           "label": "fixedparameterposition.gen.fs",
           "filePath": "fixedparameterposition.gen.fs",
           "modulePath": "onshape/std/fixedparameterposition.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/86514834404a91538c97406a",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -5907,6 +6003,7 @@
           "label": "flatOperationType.fs",
           "filePath": "flatOperationType.fs",
           "modulePath": "onshape/std/flatOperationType.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/59196ac3cd00246544c705f3",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -5931,6 +6028,7 @@
           "label": "formedUtils.fs",
           "filePath": "formedUtils.fs",
           "modulePath": "onshape/std/formedUtils.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/5f3106614f70dd207f9e8f74",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/containers.fs",
@@ -6005,6 +6103,7 @@
           "label": "frame.fs",
           "filePath": "frame.fs",
           "modulePath": "onshape/std/frame.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/7d39eff85eff86d560b39fd0",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/booleanoperationtype.gen.fs",
@@ -6078,6 +6177,7 @@
           "label": "frameAttributes.fs",
           "filePath": "frameAttributes.fs",
           "modulePath": "onshape/std/frameAttributes.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/434d48af701685a970ed4547",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/containers.fs",
@@ -6202,6 +6302,7 @@
           "label": "frameTrim.fs",
           "filePath": "frameTrim.fs",
           "modulePath": "onshape/std/frameTrim.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/0097cdbf0e6bb877a03bb6a9",
           "imports": [
             "onshape/std/booleanoperationtype.gen.fs",
             "onshape/std/containers.fs",
@@ -6241,6 +6342,7 @@
           "label": "frameUtils.fs",
           "filePath": "frameUtils.fs",
           "modulePath": "onshape/std/frameUtils.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/f4211fc37f071413a7d15562",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/containers.fs",
@@ -6412,6 +6514,7 @@
           "label": "geometriccontinuity.gen.fs",
           "filePath": "geometriccontinuity.gen.fs",
           "modulePath": "onshape/std/geometriccontinuity.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/acb9d8d3e36bd2f6c59a070e",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -6435,6 +6538,7 @@
           "label": "geometry.fs",
           "filePath": "geometry.fs",
           "modulePath": "geometry.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/b9a58548f6cc4fa7acef723a",
           "imports": [],
           "reexports": [
             "onshape/std/common.fs",
@@ -6636,6 +6740,7 @@
           "label": "geomOperations.fs",
           "filePath": "geomOperations.fs",
           "modulePath": "onshape/std/geomOperations.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/ddbe7e9c67ca4a44935354fa",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/context.fs",
@@ -6833,6 +6938,7 @@
           "label": "gtolconstrainttype.gen.fs",
           "filePath": "gtolconstrainttype.gen.fs",
           "modulePath": "onshape/std/gtolconstrainttype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/4a747c8375e166894f9a84d6",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -6852,6 +6958,7 @@
           "label": "gtolextendedconstrainttype.gen.fs",
           "filePath": "gtolextendedconstrainttype.gen.fs",
           "modulePath": "onshape/std/gtolextendedconstrainttype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/9b68ce155c8eb050a615e3f8",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -6871,6 +6978,7 @@
           "label": "gusset.fs",
           "filePath": "gusset.fs",
           "modulePath": "onshape/std/gusset.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/e2572c23647afebacc8e0af1",
           "imports": [
             "onshape/std/units.fs",
             "onshape/std/valueBounds.fs",
@@ -6926,6 +7034,7 @@
           "label": "helix.fs",
           "filePath": "helix.fs",
           "modulePath": "onshape/std/helix.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/a80a05e9b600481ba245f9b3",
           "imports": [
             "onshape/std/box.fs",
             "onshape/std/containers.fs",
@@ -6982,6 +7091,7 @@
           "label": "hole.fs",
           "filePath": "hole.fs",
           "modulePath": "onshape/std/hole.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/75b72139bd104b1bbf74528e",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/boolean.fs",
@@ -7095,6 +7205,7 @@
           "label": "holeAttribute.fs",
           "filePath": "holeAttribute.fs",
           "modulePath": "onshape/std/holeAttribute.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/5fcf48cb66a061fc3b60a0a3",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/feature.fs",
@@ -7149,6 +7260,7 @@
           "label": "holepositionreference.gen.fs",
           "filePath": "holepositionreference.gen.fs",
           "modulePath": "onshape/std/holepositionreference.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/39df3afac6279538bd48c0c9",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -7172,6 +7284,7 @@
           "label": "holeprofiletype.gen.fs",
           "filePath": "holeprofiletype.gen.fs",
           "modulePath": "onshape/std/holeprofiletype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/8981ea8abe8bf9c690be78fc",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -7195,6 +7308,7 @@
           "label": "holepropagationtype.gen.fs",
           "filePath": "holepropagationtype.gen.fs",
           "modulePath": "onshape/std/holepropagationtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/cf4964a790eab4984d7fd59d",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -7220,6 +7334,7 @@
           "label": "holesectionfacetype.gen.fs",
           "filePath": "holesectionfacetype.gen.fs",
           "modulePath": "onshape/std/holesectionfacetype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/91b01f6628d1379f43ae0f43",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -7244,6 +7359,7 @@
           "label": "holeTable.fs",
           "filePath": "holeTable.fs",
           "modulePath": "onshape/std/holeTable.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/c2f42855d1225ded9be6506b",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/hole.fs",
@@ -7271,6 +7387,7 @@
           "label": "holetables.gen.fs",
           "filePath": "holetables.gen.fs",
           "modulePath": "onshape/std/holetables.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/7404cb4ca6ff18ada8fce168",
           "imports": [
             "onshape/std/units.fs",
             "onshape/std/lookupTablePath.fs"
@@ -7395,6 +7512,7 @@
           "label": "holeUtils.fs",
           "filePath": "holeUtils.fs",
           "modulePath": "onshape/std/holeUtils.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/35f769732bd47acc2fbcb14e",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/units.fs"
@@ -7451,6 +7569,7 @@
           "label": "icon.gen.fs",
           "filePath": "icon.gen.fs",
           "modulePath": "onshape/std/icon.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/439a28b770db621045a9d16c",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -7470,6 +7589,7 @@
           "label": "imagemappingtype.gen.fs",
           "filePath": "imagemappingtype.gen.fs",
           "modulePath": "onshape/std/imagemappingtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/959aa9bfa3553f909761ee4f",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -7494,6 +7614,7 @@
           "label": "importDerived.fs",
           "filePath": "importDerived.fs",
           "modulePath": "onshape/std/importDerived.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/347a20e00cc748938db716a6",
           "imports": [
             "onshape/std/boolean.fs",
             "onshape/std/booleanHeuristics.fs",
@@ -7562,6 +7683,7 @@
           "label": "importForeign.fs",
           "filePath": "importForeign.fs",
           "modulePath": "onshape/std/importForeign.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/98fe97e44b354b13b737d2b8",
           "imports": [
             "onshape/std/feature.fs",
             "onshape/std/valueBounds.fs",
@@ -7598,6 +7720,7 @@
           "label": "instantiator.fs",
           "filePath": "instantiator.fs",
           "modulePath": "onshape/std/instantiator.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/fc465547b6e7c4543820da2d",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/context.fs",
@@ -7669,6 +7792,7 @@
           "label": "isocline.fs",
           "filePath": "isocline.fs",
           "modulePath": "onshape/std/isocline.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/e5b011a4a78d5b3ce3acca6f",
           "imports": [
             "onshape/std/feature.fs",
             "onshape/std/valueBounds.fs",
@@ -7700,6 +7824,7 @@
           "label": "isoparametricCurve.fs",
           "filePath": "isoparametricCurve.fs",
           "modulePath": "onshape/std/isoparametricCurve.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/e6cf88cc8ce4455ab330b5e8",
           "imports": [
             "onshape/std/feature.fs",
             "onshape/std/valueBounds.fs",
@@ -7734,6 +7859,7 @@
           "label": "jogPolygons.fs",
           "filePath": "jogPolygons.fs",
           "modulePath": "onshape/std/jogPolygons.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/64066ccd65a5fd3aa87ae952",
           "imports": [
             "onshape/std/box.fs",
             "onshape/std/containers.fs",
@@ -7791,6 +7917,7 @@
           "label": "libraryValidation.fs",
           "filePath": "libraryValidation.fs",
           "modulePath": "onshape/std/libraryValidation.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/9ff4d85d726fe82596089c75",
           "imports": [],
           "reexports": [
             "onshape/std/context.fs",
@@ -7821,6 +7948,7 @@
           "label": "linearPattern.fs",
           "filePath": "linearPattern.fs",
           "modulePath": "onshape/std/linearPattern.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/2ad55c3d15cc45368a53e92c",
           "imports": [
             "onshape/std/manipulator.fs",
             "onshape/std/mathUtils.fs",
@@ -7859,6 +7987,7 @@
           "label": "loft.fs",
           "filePath": "loft.fs",
           "modulePath": "onshape/std/loft.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/0aef2b1033d14885b0266e73",
           "imports": [
             "onshape/std/boolean.fs",
             "onshape/std/booleanHeuristics.fs",
@@ -7938,6 +8067,7 @@
           "label": "lofttopology.gen.fs",
           "filePath": "lofttopology.gen.fs",
           "modulePath": "onshape/std/lofttopology.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/b2077a52c9d520f2bda0b236",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -7957,6 +8087,7 @@
           "label": "lookupTablePath.fs",
           "filePath": "lookupTablePath.fs",
           "modulePath": "onshape/std/lookupTablePath.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/13ebf0d4c7f82f6f6f3831f4",
           "imports": [
             "onshape/std/math.fs",
             "onshape/std/string.fs",
@@ -8021,6 +8152,7 @@
           "label": "manipulator.fs",
           "filePath": "manipulator.fs",
           "modulePath": "onshape/std/manipulator.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/1896b9c860a540c48f3dea31",
           "imports": [
             "onshape/std/context.fs",
             "onshape/std/feature.fs",
@@ -8203,6 +8335,7 @@
           "label": "manipulatordragtypeenum.gen.fs",
           "filePath": "manipulatordragtypeenum.gen.fs",
           "modulePath": "onshape/std/manipulatordragtypeenum.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/82dada4a398d1fb6a6a5ff29",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -8226,6 +8359,7 @@
           "label": "manipulatorstyleenum.gen.fs",
           "filePath": "manipulatorstyleenum.gen.fs",
           "modulePath": "onshape/std/manipulatorstyleenum.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/b288f1db7d5d462fb700b139",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -8249,6 +8383,7 @@
           "label": "manipulatortype.gen.fs",
           "filePath": "manipulatortype.gen.fs",
           "modulePath": "onshape/std/manipulatortype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/b3c95f9f41fc49d48bd919c4",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -8272,6 +8407,7 @@
           "label": "massProperty.fs",
           "filePath": "massProperty.fs",
           "modulePath": "onshape/std/massProperty.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/ff3fabe83cda025971f8ef27",
           "imports": [
             "onshape/std/context.fs",
             "onshape/std/error.fs",
@@ -8311,6 +8447,7 @@
           "label": "mateConnector.fs",
           "filePath": "mateConnector.fs",
           "modulePath": "onshape/std/mateConnector.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/82a05608e31d46b6988ffde7",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/evaluate.fs",
@@ -8358,6 +8495,7 @@
           "label": "mateconnectoraxistype.gen.fs",
           "filePath": "mateconnectoraxistype.gen.fs",
           "modulePath": "onshape/std/mateconnectoraxistype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/c286c303e24d4255bf459f53",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -8382,6 +8520,7 @@
           "label": "matedoftype.gen.fs",
           "filePath": "matedoftype.gen.fs",
           "modulePath": "matedoftype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/cac1280218bc217d7896d326",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -8401,6 +8540,7 @@
           "label": "math.fs",
           "filePath": "math.fs",
           "modulePath": "onshape/std/math.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/8c35c386abc54cc7af7f8a7c",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -8592,6 +8732,7 @@
           "label": "mathUtils.fs",
           "filePath": "mathUtils.fs",
           "modulePath": "onshape/std/mathUtils.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/ba43a5fc50f44cfabadb3a5d",
           "imports": [],
           "reexports": [
             "onshape/std/math.fs",
@@ -8621,6 +8762,7 @@
           "label": "matrix.fs",
           "filePath": "matrix.fs",
           "modulePath": "onshape/std/matrix.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/ddfe7f76d34e4622a9d69b6a",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/math.fs"
@@ -8739,6 +8881,7 @@
           "label": "matrixWithUnits.fs",
           "filePath": "matrixWithUnits.fs",
           "modulePath": "onshape/std/matrixWithUnits.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/ae38bebfd3c8607d6bb6a986",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/math.fs",
@@ -8776,6 +8919,7 @@
           "label": "metadata.fs",
           "filePath": "metadata.fs",
           "modulePath": "onshape/std/metadata.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/32029212261606cb210c9287",
           "imports": [
             "onshape/std/math.fs"
           ],
@@ -8813,6 +8957,7 @@
           "label": "mirror.fs",
           "filePath": "mirror.fs",
           "modulePath": "onshape/std/mirror.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/a467826ff0df4970804cbe40",
           "imports": [
             "onshape/std/boolean.fs",
             "onshape/std/booleanHeuristics.fs",
@@ -8859,6 +9004,7 @@
           "label": "modifyFillet.fs",
           "filePath": "modifyFillet.fs",
           "modulePath": "onshape/std/modifyFillet.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/9fa139fb0be24611874fa080",
           "imports": [
             "onshape/std/evaluate.fs",
             "onshape/std/feature.fs",
@@ -8896,6 +9042,7 @@
           "label": "moveCurveBoundary.fs",
           "filePath": "moveCurveBoundary.fs",
           "modulePath": "onshape/std/moveCurveBoundary.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/5156171ca2dff4e1afb66614",
           "imports": [
             "onshape/std/common.fs"
           ],
@@ -8928,6 +9075,7 @@
           "label": "movecurveboundarytype.gen.fs",
           "filePath": "movecurveboundarytype.gen.fs",
           "modulePath": "onshape/std/movecurveboundarytype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/d580f996f85dab59905c63d1",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -8952,6 +9100,7 @@
           "label": "moveFace.fs",
           "filePath": "moveFace.fs",
           "modulePath": "onshape/std/moveFace.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/7edcd76bfb344d97b93a5829",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/box.fs",
@@ -9026,6 +9175,7 @@
           "label": "mutualTrim.fs",
           "filePath": "mutualTrim.fs",
           "modulePath": "onshape/std/mutualTrim.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/dba2cb40f6128fb6215b4aa2",
           "imports": [
             "onshape/std/query.fs",
             "onshape/std/boolean.fs",
@@ -9072,6 +9222,7 @@
           "label": "nameEntity.fs",
           "filePath": "nameEntity.fs",
           "modulePath": "onshape/std/nameEntity.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/ec0c840897771ac385c9b5ef",
           "imports": [
             "onshape/std/error.fs",
             "onshape/std/feature.fs",
@@ -9099,6 +9250,7 @@
           "label": "nurbsUtils.fs",
           "filePath": "nurbsUtils.fs",
           "modulePath": "onshape/std/nurbsUtils.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/e09693a880994d545b43e60c",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/math.fs",
@@ -9138,6 +9290,7 @@
           "label": "offsetCurveOnFace.fs",
           "filePath": "offsetCurveOnFace.fs",
           "modulePath": "onshape/std/offsetCurveOnFace.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/796a758013a5141024f894ec",
           "imports": [
             "onshape/std/geomOperations.fs",
             "onshape/std/feature.fs",
@@ -9188,6 +9341,7 @@
           "label": "offsetcurvetype.gen.fs",
           "filePath": "offsetcurvetype.gen.fs",
           "modulePath": "onshape/std/offsetcurvetype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/de2eb70b7fbcbfd7fbfdcec5",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -9211,6 +9365,7 @@
           "label": "offsetSurface.fs",
           "filePath": "offsetSurface.fs",
           "modulePath": "onshape/std/offsetSurface.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/d2eb43a944d84c2e47139545",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/evaluate.fs",
@@ -9264,6 +9419,7 @@
           "label": "origincreationtype.gen.fs",
           "filePath": "origincreationtype.gen.fs",
           "modulePath": "onshape/std/origincreationtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/0cb87dff1a72422fbc84f5e5",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -9287,6 +9443,7 @@
           "label": "partStudio.fs",
           "filePath": "partStudio.fs",
           "modulePath": "onshape/std/partStudio.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/13138abbdc63f6cf37a73f07",
           "imports": [
             "onshape/std/context.fs",
             "onshape/std/defaultFeatures.fs",
@@ -9316,6 +9473,7 @@
           "label": "partstudioitemtype.gen.fs",
           "filePath": "partstudioitemtype.gen.fs",
           "modulePath": "onshape/std/partstudioitemtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/fa31b273cf5a324d77de5816",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -9335,6 +9493,7 @@
           "label": "path.fs",
           "filePath": "path.fs",
           "modulePath": "onshape/std/path.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/541ed415686a934607f3e443",
           "imports": [
             "onshape/std/box.fs",
             "onshape/std/containers.fs",
@@ -9439,6 +9598,7 @@
           "label": "pattern.fs",
           "filePath": "pattern.fs",
           "modulePath": "onshape/std/pattern.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/426004953ded4dca8014c480",
           "imports": [],
           "reexports": [
             "onshape/std/circularPattern.fs",
@@ -9464,6 +9624,7 @@
           "label": "patternCommon.fs",
           "filePath": "patternCommon.fs",
           "modulePath": "onshape/std/patternCommon.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/6b9125df513067dc8a08b128",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -9508,6 +9669,7 @@
           "label": "patternUtils.fs",
           "filePath": "patternUtils.fs",
           "modulePath": "onshape/std/patternUtils.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/c27f27a32c1b484b8333e433",
           "imports": [
             "onshape/std/formedUtils.fs",
             "onshape/std/mathUtils.fs",
@@ -9625,6 +9787,7 @@
           "label": "persistentCoordSystem.fs",
           "filePath": "persistentCoordSystem.fs",
           "modulePath": "onshape/std/persistentCoordSystem.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/669dcbdd2a10b8552de45a7c",
           "imports": [
             "onshape/std/context.fs",
             "onshape/std/coordSystem.fs"
@@ -9660,6 +9823,7 @@
           "label": "primitives.fs",
           "filePath": "primitives.fs",
           "modulePath": "onshape/std/primitives.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/dc9e71d454d34142ae66df18",
           "imports": [
             "onshape/std/boundingtype.gen.fs",
             "onshape/std/containers.fs",
@@ -9718,6 +9882,7 @@
           "label": "profilecontrolmode.gen.fs",
           "filePath": "profilecontrolmode.gen.fs",
           "modulePath": "onshape/std/profilecontrolmode.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/4bf897bf5f1dda8b20e128ff",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -9743,6 +9908,7 @@
           "label": "projectCurves.fs",
           "filePath": "projectCurves.fs",
           "modulePath": "onshape/std/projectCurves.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/ed406c2c2cb8da09b7d6c5e6",
           "imports": [
             "onshape/std/booleanoperationtype.gen.fs",
             "onshape/std/boundingtype.gen.fs",
@@ -9793,6 +9959,7 @@
           "label": "projectiontype.gen.fs",
           "filePath": "projectiontype.gen.fs",
           "modulePath": "onshape/std/projectiontype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/ec739638f0a117a475a744af",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -9817,6 +9984,7 @@
           "label": "properties.fs",
           "filePath": "properties.fs",
           "modulePath": "onshape/std/properties.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/cc103fba3c348eac3f68de66",
           "imports": [
             "onshape/std/context.fs",
             "onshape/std/query.fs",
@@ -9865,6 +10033,7 @@
           "label": "propertytype.gen.fs",
           "filePath": "propertytype.gen.fs",
           "modulePath": "onshape/std/propertytype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/a306525bc0604ebbc0371a18",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -9888,6 +10057,7 @@
           "label": "query.fs",
           "filePath": "query.fs",
           "modulePath": "onshape/std/query.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/9fde5dffaf8d4e4c99aaa22c",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/context.fs",
@@ -11296,6 +11466,7 @@
           "label": "queryVariable.fs",
           "filePath": "queryVariable.fs",
           "modulePath": "onshape/std/queryVariable.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/2f3802712bd8620b3f97f4d3",
           "imports": [
             "onshape/std/debug.fs",
             "onshape/std/feature.fs",
@@ -11351,6 +11522,7 @@
           "label": "radiusdisplay.gen.fs",
           "filePath": "radiusdisplay.gen.fs",
           "modulePath": "onshape/std/radiusdisplay.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/bcb323ec829649ecb3b3cb08",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -11370,6 +11542,7 @@
           "label": "recordpatterntype.gen.fs",
           "filePath": "recordpatterntype.gen.fs",
           "modulePath": "onshape/std/recordpatterntype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/5848ecaca27364e5dcd23848",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -11399,6 +11572,7 @@
           "label": "registerSheetMetalBooleanTools.fs",
           "filePath": "registerSheetMetalBooleanTools.fs",
           "modulePath": "onshape/std/registerSheetMetalBooleanTools.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/8f13008615f1941e7ca4132b",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/evaluate.fs",
@@ -11451,6 +11625,7 @@
           "label": "registerSheetMetalFormedTools.fs",
           "filePath": "registerSheetMetalFormedTools.fs",
           "modulePath": "onshape/std/registerSheetMetalFormedTools.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/2692edb5e6a878a3c3044ebd",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/evaluate.fs",
@@ -11495,6 +11670,7 @@
           "label": "releases.fs",
           "filePath": "releases.fs",
           "modulePath": "onshape/std/releases.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/104280ffd3ebe797b0826920",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/metadata.fs",
@@ -11544,6 +11720,7 @@
           "label": "replaceFace.fs",
           "filePath": "replaceFace.fs",
           "modulePath": "onshape/std/replaceFace.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/5bb9bf6d8b544ce08e7bbea3",
           "imports": [
             "onshape/std/evaluate.fs",
             "onshape/std/feature.fs",
@@ -11589,6 +11766,7 @@
           "label": "revolve.fs",
           "filePath": "revolve.fs",
           "modulePath": "onshape/std/revolve.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/b29e3c6fee9a45cdb0c1b8d0",
           "imports": [
             "onshape/std/boolean.fs",
             "onshape/std/booleanHeuristics.fs",
@@ -11653,6 +11831,7 @@
           "label": "rib.fs",
           "filePath": "rib.fs",
           "modulePath": "onshape/std/rib.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/88905950195fcc6a1eb7cff1",
           "imports": [
             "onshape/std/booleanoperationtype.gen.fs",
             "onshape/std/boundingtype.gen.fs",
@@ -11698,6 +11877,7 @@
           "label": "rotationtype.gen.fs",
           "filePath": "rotationtype.gen.fs",
           "modulePath": "onshape/std/rotationtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/5e1fada3df174b0e9f70f902",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -11721,6 +11901,7 @@
           "label": "routingCurve.fs",
           "filePath": "routingCurve.fs",
           "modulePath": "onshape/std/routingCurve.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/0dc790088e5c768286ffe759",
           "imports": [
             "onshape/std/coordSystem.fs",
             "onshape/std/debug.fs",
@@ -11789,6 +11970,7 @@
           "label": "ruledSurface.fs",
           "filePath": "ruledSurface.fs",
           "modulePath": "onshape/std/ruledSurface.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/09baebccb794ebb8a89053bc",
           "imports": [
             "onshape/std/boolean.fs",
             "onshape/std/containers.fs",
@@ -11851,6 +12033,7 @@
           "label": "ruledsurfacecornertype.gen.fs",
           "filePath": "ruledsurfacecornertype.gen.fs",
           "modulePath": "onshape/std/ruledsurfacecornertype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/cf661ac29a043a499fc79d1a",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -11874,6 +12057,7 @@
           "label": "ruledsurfacetype.gen.fs",
           "filePath": "ruledsurfacetype.gen.fs",
           "modulePath": "onshape/std/ruledsurfacetype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/aacd201f9173e3b49eb115c0",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -11897,6 +12081,7 @@
           "label": "sectionpart.fs",
           "filePath": "sectionpart.fs",
           "modulePath": "onshape/std/sectionpart.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/0b4412195ce044c5bcbf1a8a",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/booleanoperationtype.gen.fs",
@@ -11973,6 +12158,7 @@
           "label": "sheetMetalAttribute.fs",
           "filePath": "sheetMetalAttribute.fs",
           "modulePath": "onshape/std/sheetMetalAttribute.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/079e7a7434d6d6d257ce71c4",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/containers.fs",
@@ -12210,6 +12396,7 @@
           "label": "sheetMetalBend.fs",
           "filePath": "sheetMetalBend.fs",
           "modulePath": "onshape/std/sheetMetalBend.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/79aae9754b4dc30288ea5ae9",
           "imports": [
             "onshape/std/common.fs",
             "onshape/std/moveFace.fs",
@@ -12245,6 +12432,7 @@
           "label": "sheetMetalBendRelief.fs",
           "filePath": "sheetMetalBendRelief.fs",
           "modulePath": "onshape/std/sheetMetalBendRelief.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/79411e0e82e1c7f9d7217662",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/containers.fs",
@@ -12288,6 +12476,7 @@
           "label": "sheetMetalBuiltIns.fs",
           "filePath": "sheetMetalBuiltIns.fs",
           "modulePath": "onshape/std/sheetMetalBuiltIns.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/d0b6b6ddce3f9eaf84fdaaeb",
           "imports": [
             "onshape/std/query.fs",
             "onshape/std/context.fs"
@@ -12322,6 +12511,7 @@
           "label": "sheetMetalCorner.fs",
           "filePath": "sheetMetalCorner.fs",
           "modulePath": "onshape/std/sheetMetalCorner.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/5eb89c21267a54d77e704240",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/containers.fs",
@@ -12365,6 +12555,7 @@
           "label": "sheetMetalCornerBreak.fs",
           "filePath": "sheetMetalCornerBreak.fs",
           "modulePath": "onshape/std/sheetMetalCornerBreak.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/29c5681cfdb2fadb8e2b2e74",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/edgeconvexitytype.gen.fs",
@@ -12422,6 +12613,7 @@
           "label": "sheetMetalCornerBreakAttributeBased.fs",
           "filePath": "sheetMetalCornerBreakAttributeBased.fs",
           "modulePath": "onshape/std/sheetMetalCornerBreakAttributeBased.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/b697c03b6f3e6b23978ad913",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/containers.fs",
@@ -12468,6 +12660,7 @@
           "label": "sheetMetalEnd.fs",
           "filePath": "sheetMetalEnd.fs",
           "modulePath": "onshape/std/sheetMetalEnd.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/71117f3f819aa455757866bd",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/containers.fs",
@@ -12507,6 +12700,7 @@
           "label": "sheetMetalFlange.fs",
           "filePath": "sheetMetalFlange.fs",
           "modulePath": "onshape/std/sheetMetalFlange.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/a2594e5a9c489bfbb5ab8533",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/boolean.fs",
@@ -12582,6 +12776,7 @@
           "label": "sheetMetalFormed.fs",
           "filePath": "sheetMetalFormed.fs",
           "modulePath": "onshape/std/sheetMetalFormed.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/f2ebdbe97b6e634bff37fdf9",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/coordSystem.fs",
@@ -12626,6 +12821,7 @@
           "label": "sheetMetalFormedLibraryValidation.fs",
           "filePath": "sheetMetalFormedLibraryValidation.fs",
           "modulePath": "sheetMetalFormedLibraryValidation.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/039878d26204b0b4b96a75eb",
           "imports": [
             "onshape/std/feature.fs",
             "onshape/std/libraryValidation.fs",
@@ -12655,6 +12851,7 @@
           "label": "sheetMetalHem.fs",
           "filePath": "sheetMetalHem.fs",
           "modulePath": "onshape/std/sheetMetalHem.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/1be7b53034b866b20141a528",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/booleanaccuracy.gen.fs",
@@ -12724,6 +12921,7 @@
           "label": "sheetMetalInFlat.fs",
           "filePath": "sheetMetalInFlat.fs",
           "modulePath": "onshape/std/sheetMetalInFlat.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/cac4065bea2be328fbe52b6d",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/booleanoperationtype.gen.fs",
@@ -12779,6 +12977,7 @@
           "label": "sheetMetalJoint.fs",
           "filePath": "sheetMetalJoint.fs",
           "modulePath": "onshape/std/sheetMetalJoint.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/be0ff52b0adb7757190df7b0",
           "imports": [
             "onshape/std/sheetMetalAttribute.fs",
             "onshape/std/sheetMetalUtils.fs",
@@ -12829,6 +13028,7 @@
           "label": "sheetMetalLoft.fs",
           "filePath": "sheetMetalLoft.fs",
           "modulePath": "onshape/std/sheetMetalLoft.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/45d29ee59606aab5fd096119",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/boolean.fs",
@@ -12895,6 +13095,7 @@
           "label": "sheetMetalMakeJoint.fs",
           "filePath": "sheetMetalMakeJoint.fs",
           "modulePath": "onshape/std/sheetMetalMakeJoint.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/1d664cfbd4aed0fa8fad363e",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/boolean.fs",
@@ -12954,6 +13155,7 @@
           "label": "sheetMetalPattern.fs",
           "filePath": "sheetMetalPattern.fs",
           "modulePath": "onshape/std/sheetMetalPattern.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/4a32569c427abd2be2b479bf",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/boolean.fs",
@@ -13017,6 +13219,7 @@
           "label": "sheetMetalRip.fs",
           "filePath": "sheetMetalRip.fs",
           "modulePath": "onshape/std/sheetMetalRip.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/031340625f297a66ec1b4fe8",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/containers.fs",
@@ -13066,6 +13269,7 @@
           "label": "sheetMetalStart.fs",
           "filePath": "sheetMetalStart.fs",
           "modulePath": "onshape/std/sheetMetalStart.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/d72cde0155be691657609507",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/box.fs",
@@ -13183,6 +13387,7 @@
           "label": "sheetMetalTab.fs",
           "filePath": "sheetMetalTab.fs",
           "modulePath": "onshape/std/sheetMetalTab.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/d0b73846dd4acdc82203ae66",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/boolean.fs",
@@ -13239,6 +13444,7 @@
           "label": "sheetMetalUtils.fs",
           "filePath": "sheetMetalUtils.fs",
           "modulePath": "onshape/std/sheetMetalUtils.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/459d631d67c38b8d80944f2f",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/booleanaccuracy.gen.fs",
@@ -13612,6 +13818,7 @@
           "label": "shell.fs",
           "filePath": "shell.fs",
           "modulePath": "onshape/std/shell.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/8ca395d9c7db47e5805098d5",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/feature.fs",
@@ -13645,6 +13852,7 @@
           "label": "sidegeometryrule.gen.fs",
           "filePath": "sidegeometryrule.gen.fs",
           "modulePath": "onshape/std/sidegeometryrule.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/3c3a1c87b8a5b846176e28be",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -13670,6 +13878,7 @@
           "label": "sketch.fs",
           "filePath": "sketch.fs",
           "modulePath": "onshape/std/sketch.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/a1ec05982b87401dad3728db",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/evaluate.fs",
@@ -13832,6 +14041,7 @@
           "label": "sketchsilhouettedisambiguation.gen.fs",
           "filePath": "sketchsilhouettedisambiguation.gen.fs",
           "modulePath": "onshape/std/sketchsilhouettedisambiguation.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/143551335650437f8843e23e",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -13851,6 +14061,7 @@
           "label": "sketchtooltype.gen.fs",
           "filePath": "sketchtooltype.gen.fs",
           "modulePath": "onshape/std/sketchtooltype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/876ac5066ad0471bb8633927",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -13870,6 +14081,7 @@
           "label": "smbendreliefstyle.gen.fs",
           "filePath": "smbendreliefstyle.gen.fs",
           "modulePath": "onshape/std/smbendreliefstyle.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/dc5d36200e683b958b4608fd",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -13893,6 +14105,7 @@
           "label": "smbendtype.gen.fs",
           "filePath": "smbendtype.gen.fs",
           "modulePath": "onshape/std/smbendtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/0b0b0b567113f1c3c3214dcd",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -13916,6 +14129,7 @@
           "label": "smcornerbreakstyle.gen.fs",
           "filePath": "smcornerbreakstyle.gen.fs",
           "modulePath": "onshape/std/smcornerbreakstyle.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/aa7f60542056e959313c5c94",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -13940,6 +14154,7 @@
           "label": "smcornerreliefstyle.gen.fs",
           "filePath": "smcornerreliefstyle.gen.fs",
           "modulePath": "onshape/std/smcornerreliefstyle.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/11da5d1e50b9e43b0333a6d5",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -13963,6 +14178,7 @@
           "label": "smcornertype.gen.fs",
           "filePath": "smcornertype.gen.fs",
           "modulePath": "onshape/std/smcornertype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/2f383c31b37fcba1b3388ff4",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -13986,6 +14202,7 @@
           "label": "smjointstyle.gen.fs",
           "filePath": "smjointstyle.gen.fs",
           "modulePath": "onshape/std/smjointstyle.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/00296aebc78c1ea6d17daa23",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -14011,6 +14228,7 @@
           "label": "smjointtype.gen.fs",
           "filePath": "smjointtype.gen.fs",
           "modulePath": "onshape/std/smjointtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/5432c36bf17203851d943df1",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -14037,6 +14255,7 @@
           "label": "smobjecttype.gen.fs",
           "filePath": "smobjecttype.gen.fs",
           "modulePath": "onshape/std/smobjecttype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/9710574b3f9d3f5fbf47b9fe",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -14060,6 +14279,7 @@
           "label": "smreliefstyle.gen.fs",
           "filePath": "smreliefstyle.gen.fs",
           "modulePath": "onshape/std/smreliefstyle.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/1726690f7f345a52c548390f",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -14086,6 +14306,7 @@
           "label": "splineUtils.fs",
           "filePath": "splineUtils.fs",
           "modulePath": "onshape/std/splineUtils.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/0dd13f15cc529acadc98dcc9",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/context.fs",
@@ -14138,6 +14359,7 @@
           "label": "splitoperationkeeptype.gen.fs",
           "filePath": "splitoperationkeeptype.gen.fs",
           "modulePath": "onshape/std/splitoperationkeeptype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/6520e264ed54f633165a96f4",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -14161,6 +14383,7 @@
           "label": "splitpart.fs",
           "filePath": "splitpart.fs",
           "modulePath": "onshape/std/splitpart.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/748321f899c84fa2958d96c5",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/boundingtype.gen.fs",
@@ -14228,6 +14451,7 @@
           "label": "standardContentUtils.fs",
           "filePath": "standardContentUtils.fs",
           "modulePath": "standardContentUtils.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/a04f84ccac40e275918d2071",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/string.fs",
@@ -14283,6 +14507,7 @@
           "label": "standardcontentvaluefieldtype.gen.fs",
           "filePath": "standardcontentvaluefieldtype.gen.fs",
           "modulePath": "onshape/std/standardcontentvaluefieldtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/739059b30cd02f27dbd86f1c",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -14306,6 +14531,7 @@
           "label": "string.fs",
           "filePath": "string.fs",
           "modulePath": "onshape/std/string.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/50fecfa4a779479ab19cceed",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -14437,6 +14663,7 @@
           "label": "surfaceBoolean.fs",
           "filePath": "surfaceBoolean.fs",
           "modulePath": "surfaceBoolean.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/11d6f2fcfb0e001e2c2f76fb",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/curveGeometry.fs",
@@ -14480,6 +14707,7 @@
           "label": "surfaceGeometry.fs",
           "filePath": "surfaceGeometry.fs",
           "modulePath": "onshape/std/surfaceGeometry.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/84088a0d613e48ca96093b07",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/context.fs",
@@ -14857,6 +15085,7 @@
           "label": "surfacetype.gen.fs",
           "filePath": "surfacetype.gen.fs",
           "modulePath": "onshape/std/surfacetype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/2a093215086b45519b7540db",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -14880,6 +15109,7 @@
           "label": "sweep.fs",
           "filePath": "sweep.fs",
           "modulePath": "onshape/std/sweep.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/1094094453bb4339acd8feca",
           "imports": [
             "onshape/std/boolean.fs",
             "onshape/std/booleanHeuristics.fs",
@@ -14938,6 +15168,7 @@
           "label": "table.fs",
           "filePath": "table.fs",
           "modulePath": "onshape/std/table.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/0bb1ccbe071d83ab5f670342",
           "imports": [],
           "reexports": [
             "onshape/std/containers.fs",
@@ -15065,6 +15296,7 @@
           "label": "tabletextalignment.gen.fs",
           "filePath": "tabletextalignment.gen.fs",
           "modulePath": "onshape/std/tabletextalignment.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/dfe7882414cf388803fa8cb8",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -15088,6 +15320,7 @@
           "label": "tabReferences.fs",
           "filePath": "tabReferences.fs",
           "modulePath": "onshape/std/tabReferences.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/3662889522982032f5938115",
           "imports": [
             "onshape/std/query.fs"
           ],
@@ -15146,6 +15379,7 @@
           "label": "tag.fs",
           "filePath": "tag.fs",
           "modulePath": "onshape/std/tag.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/0ebf144570c405d3151998fa",
           "imports": [
             "onshape/std/attributes.fs",
             "onshape/std/containers.fs",
@@ -15196,6 +15430,7 @@
           "label": "templatestring.fs",
           "filePath": "templatestring.fs",
           "modulePath": "onshape/std/templatestring.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/d3fc54355ef9aea4afd90434",
           "imports": [],
           "reexports": [
             "onshape/std/units.fs"
@@ -15238,6 +15473,7 @@
           "label": "tessellatedloftreturnstatus.gen.fs",
           "filePath": "tessellatedloftreturnstatus.gen.fs",
           "modulePath": "tessellatedloftreturnstatus.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/cbb5af1e57e846f9022887cf",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -15257,6 +15493,7 @@
           "label": "thicken.fs",
           "filePath": "thicken.fs",
           "modulePath": "onshape/std/thicken.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/58ff1936073d4b278a453881",
           "imports": [
             "onshape/std/boolean.fs",
             "onshape/std/booleanHeuristics.fs",
@@ -15297,6 +15534,7 @@
           "label": "tolerance.fs",
           "filePath": "tolerance.fs",
           "modulePath": "onshape/std/tolerance.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/587cafa3f61f86bf2e0b909c",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/feature.fs",
@@ -15383,6 +15621,7 @@
           "label": "toleranceschemaclass.gen.fs",
           "filePath": "toleranceschemaclass.gen.fs",
           "modulePath": "onshape/std/toleranceschemaclass.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/ada718aa602b06e1de252fa6",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -15406,6 +15645,7 @@
           "label": "toleranceSchemaValidation.fs",
           "filePath": "toleranceSchemaValidation.fs",
           "modulePath": "toleranceSchemaValidation.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/d4246a8c4fdc89e2d50c5eb3",
           "imports": [
             "onshape/std/feature.fs",
             "onshape/std/libraryValidation.fs"
@@ -15431,6 +15671,7 @@
           "label": "toleranceTypes.fs",
           "filePath": "toleranceTypes.fs",
           "modulePath": "onshape/std/toleranceTypes.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/59189068e59fc8a3fa6a0f7e",
           "imports": [
             "onshape/std/units.fs"
           ],
@@ -15486,6 +15727,7 @@
           "label": "tool.fs",
           "filePath": "tool.fs",
           "modulePath": "onshape/std/tool.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/0ff331b203ab4620aed3f966",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -15553,6 +15795,7 @@
           "label": "topologymatchtype.gen.fs",
           "filePath": "topologymatchtype.gen.fs",
           "modulePath": "onshape/std/topologymatchtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/e39b0d9917a6048a96491a90",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -15572,6 +15815,7 @@
           "label": "topologyUtils.fs",
           "filePath": "topologyUtils.fs",
           "modulePath": "onshape/std/topologyUtils.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/d7bf5b4a972f78db54f09203",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/context.fs",
@@ -15705,6 +15949,7 @@
           "label": "transform.fs",
           "filePath": "transform.fs",
           "modulePath": "onshape/std/transform.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/6d5267035f3b4a908db705cd",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/math.fs",
@@ -15832,6 +16077,7 @@
           "label": "transformCopy.fs",
           "filePath": "transformCopy.fs",
           "modulePath": "onshape/std/transformCopy.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/81869edac6224be29410b2a3",
           "imports": [
             "onshape/std/box.fs",
             "onshape/std/containers.fs",
@@ -15890,6 +16136,7 @@
           "label": "transformUV.fs",
           "filePath": "transformUV.fs",
           "modulePath": "onshape/std/transformUV.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/f56cd06c5bf3f9b41a209320",
           "imports": [
             "onshape/std/math.fs",
             "onshape/std/matrix.fs",
@@ -15944,6 +16191,7 @@
           "label": "uihint.gen.fs",
           "filePath": "uihint.gen.fs",
           "modulePath": "onshape/std/uihint.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/0117c447f7854b87ba124535",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -15963,6 +16211,7 @@
           "label": "units.fs",
           "filePath": "units.fs",
           "modulePath": "onshape/std/units.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/1d63f39bbbe543ab87196395",
           "imports": [
             "onshape/std/math.fs",
             "onshape/std/expressionvalidationresult.gen.fs",
@@ -16559,6 +16808,7 @@
           "label": "valueBounds.fs",
           "filePath": "valueBounds.fs",
           "modulePath": "onshape/std/valueBounds.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/87b09e244a234eb791b47826",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/math.fs",
@@ -16990,6 +17240,7 @@
           "label": "variable.fs",
           "filePath": "variable.fs",
           "modulePath": "onshape/std/variable.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/357eadcd05424ef4a2360e88",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/debug.fs",
@@ -17064,6 +17315,7 @@
           "label": "variabletype.gen.fs",
           "filePath": "variabletype.gen.fs",
           "modulePath": "onshape/std/variabletype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/7f673738e6913ee727a79f1d",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -17087,6 +17339,7 @@
           "label": "vector.fs",
           "filePath": "vector.fs",
           "modulePath": "onshape/std/vector.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/b81f3a02f1e34b7dab9d239c",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/math.fs",
@@ -17448,6 +17701,7 @@
           "label": "volumeaccuracy.gen.fs",
           "filePath": "volumeaccuracy.gen.fs",
           "modulePath": "onshape/std/volumeaccuracy.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/b98e66f3ed0bd9f7b4b4ee4b",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -17471,6 +17725,7 @@
           "label": "weldcontourtype.gen.fs",
           "filePath": "weldcontourtype.gen.fs",
           "modulePath": "onshape/std/weldcontourtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/ece770f1a9e74399bd1e9439",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -17490,6 +17745,7 @@
           "label": "weldfinishing.gen.fs",
           "filePath": "weldfinishing.gen.fs",
           "modulePath": "onshape/std/weldfinishing.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/bc6f2917329e95e4075c2366",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -17509,6 +17765,7 @@
           "label": "weldjointtype.gen.fs",
           "filePath": "weldjointtype.gen.fs",
           "modulePath": "onshape/std/weldjointtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/d97585896b051cc1e2695962",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -17528,6 +17785,7 @@
           "label": "weldstandard.gen.fs",
           "filePath": "weldstandard.gen.fs",
           "modulePath": "onshape/std/weldstandard.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/b07e9a7da4ba691a92319d29",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -17547,6 +17805,7 @@
           "label": "weldtype.gen.fs",
           "filePath": "weldtype.gen.fs",
           "modulePath": "onshape/std/weldtype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/ce60eb22fc4a5a5b5cb84518",
           "imports": [],
           "reexports": [],
           "importTargets": [],
@@ -17566,6 +17825,7 @@
           "label": "workflow.fs",
           "filePath": "workflow.fs",
           "modulePath": "onshape/std/workflow.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/e55c40f309dc1073b489a1b8",
           "imports": [
             "onshape/std/containers.fs"
           ],
@@ -17616,6 +17876,7 @@
           "label": "wrap.fs",
           "filePath": "wrap.fs",
           "modulePath": "onshape/std/wrap.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/5e2ac00ef43da299ccb2ff00",
           "imports": [
             "onshape/std/boolean.fs",
             "onshape/std/booleanHeuristics.fs",
@@ -17680,6 +17941,7 @@
           "label": "wrapSurface.fs",
           "filePath": "wrapSurface.fs",
           "modulePath": "onshape/std/wrapSurface.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/6f0c4f171ea09db350577341",
           "imports": [
             "onshape/std/containers.fs",
             "onshape/std/context.fs",
@@ -17739,6 +18001,7 @@
           "label": "wraptype.gen.fs",
           "filePath": "wraptype.gen.fs",
           "modulePath": "onshape/std/wraptype.gen.fs",
+          "sourceUrl": "https://cad.onshape.com/documents/12312312345abcabcabcdeff/w/a855e4161c814f2e9ab3698a/e/3ca3f0740529d1b6c6cd07f1",
           "imports": [],
           "reexports": [],
           "importTargets": [],

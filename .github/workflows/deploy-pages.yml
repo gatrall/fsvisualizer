@@ -55,7 +55,10 @@ jobs:
             /tmp/onshape-std-library
 
       - name: Regenerate graph.json
-        run: npm run index -- --root /tmp/onshape-std-library
+        run: |
+          npm run index -- \
+            --root /tmp/onshape-std-library \
+            --onshape-map tools/onshape-element-map.json
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
