@@ -1840,6 +1840,8 @@ export default function App() {
                   <a
                     className="inline-link"
                     href={selectedNodeDocumentationUrl}
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
                     {selectedNodeDocumentationLabel}
                   </a>
@@ -1853,6 +1855,8 @@ export default function App() {
                   <a
                     className="inline-link"
                     href={selectedNode.sourceUrl}
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
                     {selectedNode.filePath}
                   </a>
