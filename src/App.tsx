@@ -37,6 +37,7 @@ const ROOT_SCOPE = "__root__";
 const UNRESOLVED_SCOPE = "__unresolved__";
 const DEFAULT_VIEW_MODE: ViewMode = "selected-1";
 const DEFAULT_LAYOUT_MODE: LayoutMode = "circle";
+const FSDOC_LIBRARY_URL = "https://cad.onshape.com/FsDoc/library.html";
 const MIN_ZOOM = 0.6;
 const MAX_ZOOM = 1.85;
 const VIEW_MODE_VALUES: ViewMode[] = [
@@ -86,6 +87,33 @@ function getScopeLabel(key: string): string {
   }
 
   return key;
+}
+
+function toModuleFileName(value: string): string | null {
+  const normalized = value.replace(/\\/g, "/").trim();
+  if (!normalized) {
+    return null;
+  }
+
+  const leaf = normalized.split("/").filter(Boolean).pop() ?? "";
+  if (!leaf.endsWith(".fs")) {
+    return null;
+  }
+
+  return leaf;
+}
+
+function getDocumentationUrl(node: GraphNodeData): string | null {
+  const candidates = [node.filePath, node.modulePath, node.id, node.label];
+
+  for (const candidate of candidates) {
+    const moduleFileName = toModuleFileName(candidate);
+    if (moduleFileName) {
+      return `${FSDOC_LIBRARY_URL}#module-${encodeURIComponent(moduleFileName)}`;
+    }
+  }
+
+  return null;
 }
 
 function expandNeighbors(
@@ -810,6 +838,14 @@ export default function App() {
   }, [graph, visibleNodeIds, showImportEdges, showReexportEdges]);
 
   const selectedNode = selectedId ? nodeById.get(selectedId) ?? null : null;
+  const selectedNodeDocumentationUrl = selectedNode
+    ? getDocumentationUrl(selectedNode)
+    : null;
+  const selectedNodeDocumentationLabel = selectedNode
+    ? toModuleFileName(selectedNode.label) ??
+      toModuleFileName(selectedNode.filePath) ??
+      selectedNode.label
+    : null;
   const selectedSymbolUsers = useMemo(() => {
     if (!selectedNode || !selectedExportSymbol) {
       return [];
@@ -1797,6 +1833,21 @@ export default function App() {
             <>
               <div className="details-row">
                 <span className="details-label">Id:</span> {selectedNode.id}
+              </div>
+              <div className="details-row">
+                <span className="details-label">Documentation:</span>{" "}
+                {selectedNodeDocumentationUrl ? (
+                  <a
+                    className="inline-link"
+                    href={selectedNodeDocumentationUrl}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    {selectedNodeDocumentationLabel}
+                  </a>
+                ) : (
+                  "Unavailable"
+                )}
               </div>
               <div className="details-row">
                 <span className="details-label">File:</span> {selectedNode.filePath}
