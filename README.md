@@ -48,6 +48,7 @@ You can run this with no ongoing manual work once enabled.
 - What it does:
   - runs weekly (Monday at 09:17 UTC) and on manual trigger
   - clones canonical stdlib mirror (`javawizard/onshape-std-library-mirror`, branch `without-versions`)
+  - refreshes `tools/onshape-element-map.json` from Onshape API
   - regenerates `public/graph.json`
   - builds and deploys to GitHub Pages
 - It also runs on pushes to `main` when app/indexer files change.
@@ -55,8 +56,11 @@ You can run this with no ongoing manual work once enabled.
 ### One-time setup in GitHub
 
 1. Push this repo to GitHub.
-2. In repo settings, open **Pages** and set source to **GitHub Actions**.
-3. Run the **Deploy Graph Viewer** workflow once (or wait for schedule).
+2. In repo settings, add repository secrets:
+   - `ONSHAPE_ACCESS_KEY`
+   - `ONSHAPE_SECRET_KEY`
+3. In repo settings, open **Pages** and set source to **GitHub Actions**.
+4. Run the **Deploy Graph Viewer** workflow once (or wait for schedule).
 
 After that, the site stays current automatically on schedule.
 

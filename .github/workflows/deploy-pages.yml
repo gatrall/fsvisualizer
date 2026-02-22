@@ -54,6 +54,17 @@ jobs:
             https://github.com/javawizard/onshape-std-library-mirror.git \
             /tmp/onshape-std-library
 
+      - name: Refresh Onshape element map
+        env:
+          ONSHAPE_ACCESS_KEY: ${{ secrets.ONSHAPE_ACCESS_KEY }}
+          ONSHAPE_SECRET_KEY: ${{ secrets.ONSHAPE_SECRET_KEY }}
+        run: |
+          if [[ -z "${ONSHAPE_ACCESS_KEY}" || -z "${ONSHAPE_SECRET_KEY}" ]]; then
+            echo "Missing ONSHAPE_ACCESS_KEY/ONSHAPE_SECRET_KEY repo secrets." >&2
+            exit 1
+          fi
+          npm run onshape-map -- --out tools/onshape-element-map.json
+
       - name: Regenerate graph.json
         run: |
           npm run index -- \
