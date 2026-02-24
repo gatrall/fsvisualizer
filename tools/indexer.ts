@@ -4,6 +4,9 @@ import path from "node:path";
 interface ParsedFile {
   id: string;
   filePath: string;
+  loc: number;
+  functionCount: number;
+  isGenerated: boolean;
   imports: string[];
   reexports: string[];
   exportedSymbols: string[];
@@ -16,6 +19,9 @@ interface NodeData {
   filePath: string;
   modulePath: string;
   sourceUrl?: string;
+  loc: number;
+  functionCount: number;
+  isGenerated?: boolean;
   imports: string[];
   reexports: string[];
   importTargets: string[];
@@ -362,6 +368,26 @@ function parseExportedSymbols(source: string): string[] {
   return out;
 }
 
+function countNonCommentLoc(sourceWithoutComments: string): number {
+  return sourceWithoutComments
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => line.length > 0).length;
+}
+
+function countFunctionDeclarations(sourceWithoutComments: string): number {
+  const pattern = /\b(?:export\s+)?function\s+[A-Za-z_][A-Za-z0-9_]*\b/g;
+  let count = 0;
+  let match = pattern.exec(sourceWithoutComments);
+
+  while (match) {
+    count += 1;
+    match = pattern.exec(sourceWithoutComments);
+  }
+
+  return count;
+}
+
 function extractIdentifierTokens(source: string): Set<string> {
   const noStrings = source.replace(/"([^"\\]|\\.)*"/g, " ");
   const tokens = new Set<string>();
@@ -475,6 +501,9 @@ async function buildGraph(
     parsedFiles.push({
       id: filePath,
       filePath,
+      loc: countNonCommentLoc(stripped),
+      functionCount: countFunctionDeclarations(stripped),
+      isGenerated: filePath.toLowerCase().endsWith(".gen.fs"),
       imports: parsedImports.imports,
       reexports: parsedImports.reexports,
       exportedSymbols: parseExportedSymbols(stripped),
@@ -535,6 +564,9 @@ async function buildGraph(
             label: path.posix.basename(resolvedTarget),
             filePath: "(unresolved module)",
             modulePath: targetModulePath,
+            loc: 0,
+            functionCount: 0,
+            isGenerated: false,
             imports: [],
             reexports: [],
             importTargets: [],
@@ -587,6 +619,9 @@ async function buildGraph(
             label: path.posix.basename(resolvedTarget),
             filePath: "(unresolved module)",
             modulePath: targetModulePath,
+            loc: 0,
+            functionCount: 0,
+            isGenerated: false,
             imports: [],
             reexports: [],
             importTargets: [],
@@ -640,6 +675,9 @@ async function buildGraph(
         filePath: file.filePath,
         modulePath: chooseModulePath(aliasCounts.get(file.id), file.filePath),
         sourceUrl,
+        loc: file.loc,
+        functionCount: file.functionCount,
+        isGenerated: file.isGenerated,
         imports: file.imports,
         reexports: file.reexports,
         importTargets: targets.importTargets,

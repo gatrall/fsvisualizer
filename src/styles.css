@@ -98,6 +98,41 @@ select {
   font-size: 0.85rem;
 }
 
+.metric-legend {
+  margin-top: 10px;
+  padding: 8px 9px;
+  border: 1px solid #dbe3ef;
+  border-radius: 7px;
+  background: #f8fafc;
+}
+
+.metric-legend-title {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.metric-legend-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.metric-chip {
+  width: 16px;
+  height: 12px;
+  border-radius: 3px;
+  border: 1px solid rgba(15, 23, 42, 0.2);
+}
+
+.metric-value {
+  font-size: 0.75rem;
+  color: #334155;
+  min-width: 24px;
+}
+
 .button-row {
   display: flex;
   flex-wrap: wrap;

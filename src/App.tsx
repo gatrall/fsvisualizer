@@ -3,6 +3,13 @@ import { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import type { GraphJson, GraphNodeData } from "./types";
 
 type LayoutMode = "concentric" | "breadthfirst" | "cose" | "circle";
+type NodeStyleMetric =
+  | "none"
+  | "fan-in"
+  | "fan-out"
+  | "exports"
+  | "loc"
+  | "functions";
 type ViewMode =
   | "search-neighbors"
   | "search-only"
@@ -43,6 +50,8 @@ interface NavigationState {
   showLabels: boolean | null;
   showImportEdges: boolean | null;
   showReexportEdges: boolean | null;
+  nodeStyleMetric: NodeStyleMetric | null;
+  dimGeneratedNodes: boolean | null;
   viewport: ViewportState | null;
 }
 
@@ -51,6 +60,7 @@ const ROOT_SCOPE = "__root__";
 const UNRESOLVED_SCOPE = "__unresolved__";
 const DEFAULT_VIEW_MODE: ViewMode = "selected-1";
 const DEFAULT_LAYOUT_MODE: LayoutMode = "circle";
+const DEFAULT_NODE_STYLE_METRIC: NodeStyleMetric = "none";
 const FSDOC_LIBRARY_URL = "https://cad.onshape.com/FsDoc/library.html";
 const MIN_ZOOM = 0.6;
 const MAX_ZOOM = 1.85;
@@ -65,6 +75,14 @@ const VIEW_MODE_VALUES: ViewMode[] = [
   "hierarchy"
 ];
 const LAYOUT_MODE_VALUES: LayoutMode[] = ["concentric", "breadthfirst", "cose", "circle"];
+const NODE_STYLE_METRIC_VALUES: NodeStyleMetric[] = [
+  "none",
+  "fan-in",
+  "fan-out",
+  "exports",
+  "loc",
+  "functions"
+];
 
 function emptyGraph(): GraphJson {
   return {
@@ -371,6 +389,14 @@ function parseLayoutMode(value: string | null): LayoutMode | null {
   return null;
 }
 
+function parseNodeStyleMetric(value: string | null): NodeStyleMetric | null {
+  if (value && NODE_STYLE_METRIC_VALUES.includes(value as NodeStyleMetric)) {
+    return value as NodeStyleMetric;
+  }
+
+  return null;
+}
+
 function parseBooleanValue(value: string | null): boolean | null {
   if (value === null) {
     return null;
@@ -480,6 +506,8 @@ function getNavigationFromHistoryState(stateValue: unknown): {
   showLabels: boolean | null;
   showImportEdges: boolean | null;
   showReexportEdges: boolean | null;
+  nodeStyleMetric: NodeStyleMetric | null;
+  dimGeneratedNodes: boolean | null;
   viewport: ViewportState | null;
 } {
   const record =
@@ -507,6 +535,11 @@ function getNavigationFromHistoryState(stateValue: unknown): {
       typeof record.showImportEdges === "boolean" ? record.showImportEdges : null,
     showReexportEdges:
       typeof record.showReexportEdges === "boolean" ? record.showReexportEdges : null,
+    nodeStyleMetric: parseNodeStyleMetric(
+      typeof record.nodeStyleMetric === "string" ? record.nodeStyleMetric : null
+    ),
+    dimGeneratedNodes:
+      typeof record.dimGeneratedNodes === "boolean" ? record.dimGeneratedNodes : null,
     viewport: parseViewportState(record.viewport)
   };
 }
@@ -525,6 +558,8 @@ function getNavigationFromUrl(searchValue: string): NavigationState {
     showLabels: parseBooleanValue(params.get("labels")),
     showImportEdges: parseBooleanValue(params.get("imports")),
     showReexportEdges: parseBooleanValue(params.get("reexports")),
+    nodeStyleMetric: parseNodeStyleMetric(params.get("style")),
+    dimGeneratedNodes: parseBooleanValue(params.get("dimgen")),
     viewport: parseViewportFromUrlParams(params)
   };
 }
@@ -544,6 +579,8 @@ function buildUrlFromNavigationState(state: {
   showLabels: boolean;
   showImportEdges: boolean;
   showReexportEdges: boolean;
+  nodeStyleMetric: NodeStyleMetric;
+  dimGeneratedNodes: boolean;
   viewport: ViewportState | null;
 }): string {
   const params = new URLSearchParams();
@@ -578,6 +615,12 @@ function buildUrlFromNavigationState(state: {
   if (!state.showReexportEdges) {
     params.set("reexports", "0");
   }
+  if (state.nodeStyleMetric !== DEFAULT_NODE_STYLE_METRIC) {
+    params.set("style", state.nodeStyleMetric);
+  }
+  if (state.dimGeneratedNodes) {
+    params.set("dimgen", "1");
+  }
   if (state.viewport) {
     params.set("z", formatViewportValue(state.viewport.zoom, 4));
     params.set("px", formatViewportValue(state.viewport.panX, 1));
@@ -603,6 +646,39 @@ function viewportStatesEqual(a: ViewportState | null, b: ViewportState | null): 
   }
 
   return a.zoom === b.zoom && a.panX === b.panX && a.panY === b.panY;
+}
+
+function clamp01(value: number): number {
+  return Math.max(0, Math.min(1, value));
+}
+
+function getMetricNormalizedValue(value: number, min: number, max: number): number {
+  if (!Number.isFinite(value) || !Number.isFinite(min) || !Number.isFinite(max) || max <= min) {
+    return 0;
+  }
+
+  return clamp01((value - min) / (max - min));
+}
+
+function getMetricNodeColor(normalized: number): string {
+  const n = clamp01(normalized);
+  const lightness = 82 - n * 44;
+  const saturation = 68 + n * 20;
+  return `hsl(207 ${saturation.toFixed(0)}% ${lightness.toFixed(0)}%)`;
+}
+
+function getMetricNodeSize(normalized: number): number {
+  const n = clamp01(normalized);
+  return Number((11 + n * 23).toFixed(1));
+}
+
+function isGeneratedNode(node: GraphNodeData): boolean {
+  if (node.isGenerated) {
+    return true;
+  }
+
+  const pathValue = (node.filePath || node.id || "").toLowerCase();
+  return pathValue.endsWith(".gen.fs");
 }
 
 function getBaseLabelSize(
@@ -694,6 +770,9 @@ export default function App() {
   const [showLabels, setShowLabels] = useState(true);
   const [showImportEdges, setShowImportEdges] = useState(true);
   const [showReexportEdges, setShowReexportEdges] = useState(true);
+  const [nodeStyleMetric, setNodeStyleMetric] =
+    useState<NodeStyleMetric>(DEFAULT_NODE_STYLE_METRIC);
+  const [dimGeneratedNodes, setDimGeneratedNodes] = useState(false);
   const [zoomPercent, setZoomPercent] = useState(100);
   const [treeDepth, setTreeDepth] = useState(3);
   const [hierarchyFolderPrefix, setHierarchyFolderPrefix] = useState("");
@@ -818,6 +897,32 @@ export default function App() {
     }
 
     return map;
+  }, [graph, nodeOrder]);
+
+  const fanInCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const nodeId of nodeOrder) {
+      counts.set(nodeId, 0);
+    }
+
+    for (const edge of graph.elements.edges) {
+      counts.set(edge.data.target, (counts.get(edge.data.target) ?? 0) + 1);
+    }
+
+    return counts;
+  }, [graph, nodeOrder]);
+
+  const fanOutCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const nodeId of nodeOrder) {
+      counts.set(nodeId, 0);
+    }
+
+    for (const edge of graph.elements.edges) {
+      counts.set(edge.data.source, (counts.get(edge.data.source) ?? 0) + 1);
+    }
+
+    return counts;
   }, [graph, nodeOrder]);
 
   const scopedNodeIds = useMemo(() => {
@@ -1017,6 +1122,69 @@ export default function App() {
     return count;
   }, [graph, visibleNodeIds, showImportEdges, showReexportEdges]);
 
+  const nodeStyleValues = useMemo(() => {
+    const values = new Map<string, number>();
+    let min = Number.POSITIVE_INFINITY;
+    let max = Number.NEGATIVE_INFINITY;
+
+    const getMetricValue = (node: GraphNodeData): number => {
+      if (nodeStyleMetric === "fan-in") {
+        return fanInCounts.get(node.id) ?? 0;
+      }
+      if (nodeStyleMetric === "fan-out") {
+        return fanOutCounts.get(node.id) ?? 0;
+      }
+      if (nodeStyleMetric === "exports") {
+        return node.exportCount;
+      }
+      if (nodeStyleMetric === "loc") {
+        return node.loc;
+      }
+      if (nodeStyleMetric === "functions") {
+        return node.functionCount;
+      }
+
+      return 0;
+    };
+
+    for (const node of graph.elements.nodes) {
+      const value = getMetricValue(node.data);
+      values.set(node.data.id, value);
+      if (visibleNodeIds.has(node.data.id)) {
+        min = Math.min(min, value);
+        max = Math.max(max, value);
+      }
+    }
+
+    if (!Number.isFinite(min) || !Number.isFinite(max)) {
+      min = 0;
+      max = 0;
+    }
+
+    return { values, min, max };
+  }, [graph, nodeStyleMetric, fanInCounts, fanOutCounts, visibleNodeIds]);
+
+  const nodeStyleLegend = useMemo(() => {
+    const labelByMetric: Record<NodeStyleMetric, string> = {
+      none: "None",
+      "fan-in": "Fan-in",
+      "fan-out": "Fan-out",
+      exports: "Exports",
+      loc: "LOC",
+      functions: "Functions"
+    };
+
+    const min = nodeStyleValues.min;
+    const max = nodeStyleValues.max;
+    const mid = Number(((min + max) / 2).toFixed(1));
+    return {
+      label: labelByMetric[nodeStyleMetric],
+      min,
+      mid,
+      max
+    };
+  }, [nodeStyleMetric, nodeStyleValues.max, nodeStyleValues.min]);
+
   const selectedNode = selectedId ? nodeById.get(selectedId) ?? null : null;
   const selectedNodeDocumentationUrl = selectedNode
     ? getDocumentationUrl(selectedNode)
@@ -1142,6 +1310,14 @@ export default function App() {
         urlNavigation.showReexportEdges ??
         currentNavigation.showReexportEdges ??
         showReexportEdges,
+      nodeStyleMetric:
+        urlNavigation.nodeStyleMetric ??
+        currentNavigation.nodeStyleMetric ??
+        nodeStyleMetric,
+      dimGeneratedNodes:
+        urlNavigation.dimGeneratedNodes ??
+        currentNavigation.dimGeneratedNodes ??
+        dimGeneratedNodes,
       viewport
     };
 
@@ -1286,6 +1462,8 @@ export default function App() {
                 showLabels: null,
                 showImportEdges: null,
                 showReexportEdges: null,
+                nodeStyleMetric: null,
+                dimGeneratedNodes: null,
                 viewport: null
               };
 
@@ -1296,6 +1474,8 @@ export default function App() {
         setShowLabels(urlNavigation.showLabels ?? true);
         setShowImportEdges(urlNavigation.showImportEdges ?? true);
         setShowReexportEdges(urlNavigation.showReexportEdges ?? true);
+        setNodeStyleMetric(urlNavigation.nodeStyleMetric ?? DEFAULT_NODE_STYLE_METRIC);
+        setDimGeneratedNodes(urlNavigation.dimGeneratedNodes ?? false);
         updateViewMode(urlNavigation.viewMode ?? DEFAULT_VIEW_MODE, "none");
         updateLayoutMode(urlNavigation.layoutMode ?? DEFAULT_LAYOUT_MODE, "none");
 
@@ -1370,6 +1550,14 @@ export default function App() {
       setShowReexportEdges(
         urlNavigation.showReexportEdges ?? historyNavigation.showReexportEdges ?? true
       );
+      setNodeStyleMetric(
+        urlNavigation.nodeStyleMetric ??
+          historyNavigation.nodeStyleMetric ??
+          DEFAULT_NODE_STYLE_METRIC
+      );
+      setDimGeneratedNodes(
+        urlNavigation.dimGeneratedNodes ?? historyNavigation.dimGeneratedNodes ?? false
+      );
 
       pendingViewportRestoreRef.current = fromStateViewport;
       scheduleViewportFallbackRestore();
@@ -1425,6 +1613,8 @@ export default function App() {
       showLabels,
       showImportEdges,
       showReexportEdges,
+      nodeStyleMetric,
+      dimGeneratedNodes,
       viewport
     };
 
@@ -1443,6 +1633,8 @@ export default function App() {
       showLabels,
       showImportEdges,
       showReexportEdges,
+      nodeStyleMetric,
+      dimGeneratedNodes,
       viewport
     });
     const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
@@ -1460,6 +1652,11 @@ export default function App() {
       (currentNavigation.showImportEdges ?? true) === showImportEdges;
     const sameReexportEdges =
       (currentNavigation.showReexportEdges ?? true) === showReexportEdges;
+    const sameNodeStyleMetric =
+      (currentNavigation.nodeStyleMetric ?? DEFAULT_NODE_STYLE_METRIC) ===
+      nodeStyleMetric;
+    const sameDimGeneratedNodes =
+      (currentNavigation.dimGeneratedNodes ?? false) === dimGeneratedNodes;
     const currentViewport =
       currentNavigation.viewport ?? parseViewportState(currentState.viewport);
     const sameViewport = viewportStatesEqual(currentViewport, viewport);
@@ -1474,6 +1671,8 @@ export default function App() {
       sameLabels &&
       sameImportEdges &&
       sameReexportEdges &&
+      sameNodeStyleMetric &&
+      sameDimGeneratedNodes &&
       sameViewport;
 
     if (action === "push" && !sameHistoryState) {
@@ -1494,7 +1693,9 @@ export default function App() {
     hierarchyFolderPrefix,
     showLabels,
     showImportEdges,
-    showReexportEdges
+    showReexportEdges,
+    nodeStyleMetric,
+    dimGeneratedNodes
   ]);
 
   useEffect(() => {
@@ -1681,10 +1882,37 @@ export default function App() {
     cy.batch(() => {
       cy.nodes().forEach((node) => {
         const id = node.id();
+        const nodeData = nodeById.get(id);
+        const metricValue = nodeStyleValues.values.get(id) ?? 0;
+        const normalizedMetric = getMetricNormalizedValue(
+          metricValue,
+          nodeStyleValues.min,
+          nodeStyleValues.max
+        );
+        const isVirtual = Boolean(nodeData?.isVirtual);
+        const isSymbolUser = selectedSymbolUserIds.has(id);
+        const metricColor =
+          isSymbolUser
+            ? "#16a34a"
+            : isVirtual
+              ? "#9ca3af"
+              : nodeStyleMetric === "none"
+                ? "#2563eb"
+                : getMetricNodeColor(normalizedMetric);
+        const metricSize =
+          nodeStyleMetric === "none" ? 14 : getMetricNodeSize(normalizedMetric);
+        const isDimmedGenerated =
+          dimGeneratedNodes && nodeData ? isGeneratedNode(nodeData) : false;
+
         node.toggleClass("hidden", !visibleNodeIds.has(id));
         node.toggleClass("nolabel", !showLabels);
         node.toggleClass("search-hit", searchMatchedIds.has(id));
-        node.toggleClass("symbol-user", selectedSymbolUserIds.has(id));
+        node.toggleClass("symbol-user", isSymbolUser);
+        node.style("background-color", metricColor);
+        node.style("width", metricSize);
+        node.style("height", metricSize);
+        node.style("background-opacity", isDimmedGenerated ? 0.45 : 1);
+        node.style("text-opacity", isDimmedGenerated ? 0.62 : 1);
       });
 
       cy.edges().forEach((edge) => {
@@ -1702,6 +1930,10 @@ export default function App() {
     visibleNodeIds,
     showLabels,
     searchMatchedIds,
+    nodeById,
+    nodeStyleMetric,
+    nodeStyleValues,
+    dimGeneratedNodes,
     selectedSymbolUserIds,
     showImportEdges,
     showReexportEdges
@@ -1832,6 +2064,8 @@ export default function App() {
     setShowLabels(true);
     setShowImportEdges(true);
     setShowReexportEdges(true);
+    setNodeStyleMetric(DEFAULT_NODE_STYLE_METRIC);
+    setDimGeneratedNodes(false);
     setExpandedFolders(folderTree.childrenByParent.get("") ?? []);
     updateViewMode(DEFAULT_VIEW_MODE, "replace");
     updateLayoutMode(DEFAULT_LAYOUT_MODE, "replace");
@@ -2029,6 +2263,27 @@ export default function App() {
             </select>
           </div>
 
+          <div className="control-group">
+            <label className="control-label" htmlFor="node-style-select">
+              Style by
+            </label>
+            <select
+              className="control-input"
+              id="node-style-select"
+              onChange={(event) =>
+                setNodeStyleMetric(event.target.value as NodeStyleMetric)
+              }
+              value={nodeStyleMetric}
+            >
+              <option value="none">None</option>
+              <option value="fan-in">Fan-in (dependents)</option>
+              <option value="fan-out">Fan-out (dependencies)</option>
+              <option value="exports">Export count</option>
+              <option value="loc">Lines of code</option>
+              <option value="functions">Function count</option>
+            </select>
+          </div>
+
           <label className="toggle-row">
             <input
               checked={showLabels}
@@ -2037,6 +2292,40 @@ export default function App() {
             />
             Show labels
           </label>
+
+          <label className="toggle-row">
+            <input
+              checked={dimGeneratedNodes}
+              onChange={(event) => setDimGeneratedNodes(event.target.checked)}
+              type="checkbox"
+            />
+            Dim .gen.fs nodes
+          </label>
+
+          {nodeStyleMetric !== "none" && (
+            <div className="metric-legend">
+              <div className="metric-legend-title">
+                {nodeStyleLegend.label} scale (visible nodes)
+              </div>
+              <div className="metric-legend-row">
+                <span
+                  className="metric-chip"
+                  style={{ backgroundColor: getMetricNodeColor(0) }}
+                />
+                <span className="metric-value">{nodeStyleLegend.min}</span>
+                <span
+                  className="metric-chip"
+                  style={{ backgroundColor: getMetricNodeColor(0.5) }}
+                />
+                <span className="metric-value">{nodeStyleLegend.mid}</span>
+                <span
+                  className="metric-chip"
+                  style={{ backgroundColor: getMetricNodeColor(1) }}
+                />
+                <span className="metric-value">{nodeStyleLegend.max}</span>
+              </div>
+            </div>
+          )}
 
           <label className="toggle-row">
             <input
@@ -2126,6 +2415,12 @@ export default function App() {
           <div>
             Zoom: {zoomPercent}% (clamped {Math.round(MIN_ZOOM * 100)}-{Math.round(MAX_ZOOM * 100)}%)
           </div>
+          <div>
+            Style: {nodeStyleLegend.label}
+            {nodeStyleMetric === "none"
+              ? ""
+              : ` (${nodeStyleLegend.min} to ${nodeStyleLegend.max})`}
+          </div>
         </div>
         {(loading || error) && (
           <div className="status-overlay" style={{ top: 82 }}>
@@ -2186,6 +2481,12 @@ export default function App() {
               </div>
               <div className="details-row">
                 <span className="details-label">Exports:</span> {selectedNode.exportCount}
+              </div>
+              <div className="details-row">
+                <span className="details-label">LOC:</span> {selectedNode.loc}
+              </div>
+              <div className="details-row">
+                <span className="details-label">Functions:</span> {selectedNode.functionCount}
               </div>
 
               <div className="details-row">

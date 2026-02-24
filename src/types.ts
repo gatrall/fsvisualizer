@@ -4,6 +4,9 @@ export interface GraphNodeData {
   filePath: string;
   modulePath: string;
   sourceUrl?: string;
+  loc: number;
+  functionCount: number;
+  isGenerated?: boolean;
   imports: string[];
   reexports: string[];
   importTargets: string[];
