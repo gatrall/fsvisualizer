@@ -1440,7 +1440,8 @@ export default function App() {
 
       try {
         const response = await fetch(`${import.meta.env.BASE_URL}graph.json`, {
-          signal: abort.signal
+          signal: abort.signal,
+          cache: "no-cache"
         });
         if (!response.ok) {
           throw new Error(`Failed to load graph.json (${response.status})`);
